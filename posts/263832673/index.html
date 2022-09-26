@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/kenny.png">
+  <link rel="icon" href="/img/kenny.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Ponder">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="软件架构编年史软件架构编年史系列 软件架构编年史(译) &#x2F;&#x2F;原文 软件架构预述(译) &#x2F;&#x2F;原文 编程语言的演化(译) &#x2F;&#x2F;原文 架构风格 vs. 架构模式 vs. 设计模式(译) &#x2F;&#x2F;原文 单体架构(译) &#x2F;&#x2F;原文 分层架构(译) &#x2F;&#x2F;原文 MVC 及其变种(译) &#x2F;&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件架构编年史">
+<meta property="og:url" content="https://ponder.red/posts/263832673/index.html">
+<meta property="og:site_name" content="Ponder">
+<meta property="og:description" content="软件架构编年史软件架构编年史系列 软件架构编年史(译) &#x2F;&#x2F;原文 软件架构预述(译) &#x2F;&#x2F;原文 编程语言的演化(译) &#x2F;&#x2F;原文 架构风格 vs. 架构模式 vs. 设计模式(译) &#x2F;&#x2F;原文 单体架构(译) &#x2F;&#x2F;原文 分层架构(译) &#x2F;&#x2F;原文 MVC 及其变种(译) &#x2F;&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-21T09:57:57.000Z">
+<meta property="article:modified_time" content="2022-09-22T01:52:49.468Z">
+<meta property="article:author" content="Ponder">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>软件架构编年史 - Ponder</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Ponder</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="软件架构编年史"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-21 17:57" pubdate>
+          2022年9月21日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">软件架构编年史</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="软件架构编年史"><a href="#软件架构编年史" class="headerlink" title="软件架构编年史"></a>软件架构编年史</h1><h2 id="软件架构编年史系列"><a href="#软件架构编年史系列" class="headerlink" title="软件架构编年史系列"></a>软件架构编年史系列</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b477b2cc6cfa">软件架构编年史(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/df295f92fb52">软件架构预述(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/07/05/software-architecture-premises/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2c4b7f86e5d4">编程语言的演化(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/07/10/programming-language-evolution/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d8dce27f279f">架构风格 vs. 架构模式 vs. 设计模式(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/07/28/architectural-styles-vs-architectural-patterns-vs-design-patterns/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/28c3439c11d3">单体架构(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/07/31/monolithic-architecture/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e9fdc85d573c">分层架构(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/03/layered-architecture/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/21079ff15a1c">MVC 及其变种(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/17/mvc-and-its-variants/">原文</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/21079ff15a1c">1979 – Model-View-Controller(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/17/mvc-and-its-variants/%23model-view-controller">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/21079ff15a1c">1987&#x2F;2000 – PAC &#x2F; Hierarchical Model-View-Controller(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/17/mvc-and-its-variants/%23hierarchical-model-view-controller">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/21079ff15a1c">1996 – Model-View-Presenter(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/17/mvc-and-its-variants/%23model-view-presenter">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bd2967d9391f">1998 –”Model 1″ &amp; “Model 2” (译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2018/08/29/model-1-model-2">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/21079ff15a1c">2005 – Model-View-ViewModel(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/17/mvc-and-its-variants/%23model-view-view_model">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/21079ff15a1c">???? – Model-View-Presenter-ViewModel(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/17/mvc-and-its-variants/%23model-view-presenter-view_model">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/87405a5afb60">2008 – Resource-Method-Representation(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2018/08/31/resource-method-representation">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2eaa134a9fb8">2014 – Action-Domain-Responder(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2018/09/03/action-domain-responder">原文</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/395814410cf5">EBI 架构(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/24/ebi-architecture/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ebaa2e11d25e">包与命名空间(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/08/31/packaging-code/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/812636d55677">领域驱动设计(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/09/07/domain-driven-design/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f39f4537857e">端口和适配器架构(六边形架构)(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/09/14/ports-adapters-architecture/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d87d5389c92a">洋葱架构(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/09/21/onion-architecture/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b565f0c00c0c">整洁架构(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/09/28/clean-architecture-standing-on-the-shoulders-of-giants/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/12dc9a4b3e35">事件驱动的架构(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/10/05/event-driven-architecture/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ab3843093903">从 CQS 到 CQRS(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/10/19/from-cqs-to-cqrs/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0c1354b3341f">面向服务的架构(SOA)(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/11/09/service-oriented-architecture-soa/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d3e8b9ac097b">清晰架构(01)：融合 DDD、洋葱架构、整洁架构、CQRS…(译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fcf5bb27a60b">清晰架构(02)：超越同心圆分层 (译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2018/07/07/more-than-concentric-layers/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dd992f3fe370">清晰架构(03)：在代码中展现架构和领域 (译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2019/06/05/reflecting-architecture-and-domain-in-code/">原文</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5f1d9500b8df">清晰架构(04)：用文档描述架构 (译)</a> &#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://herbertograca.com/2019/08/12/documenting-software-architecture/">原文</a></li>
+<li>一个项目的演进：从 MVP 到 P</li>
+<li>4 + 1 架构视图模型</li>
+<li>架构的质量属性</li>
+</ul>
+<h2 id="时间线"><a href="#时间线" class="headerlink" title="时间线"></a>时间线</h2><ul>
+<li>20 世纪 50 年代<ul>
+<li><strong>非结构化编程</strong></li>
+<li>~1951 – <strong>汇编</strong></li>
+</ul>
+</li>
+<li>20 世纪 60 年代<ul>
+<li><strong>结构化编程</strong></li>
+<li><strong>分层</strong>: 用户界面、业务逻辑数据存储都在<strong>一层</strong>。</li>
+<li>~1958 – Algol</li>
+</ul>
+</li>
+<li>20 世纪 70 年代<ul>
+<li><strong>过程式&#x2F;函数式编程</strong></li>
+<li>~1970 – Pascal</li>
+<li>~1972 – C</li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://heim.ifi.uio.no/~trygver/1979/mvc-2/1979-12-MVC.pdf">1979</a> – <strong><a href="/posts/2218208641/">MVC</a> 模式(Model-View-Controller)</strong></li>
+</ul>
+</li>
+<li>20 世纪 80 年代<ul>
+<li><strong>面向对象编程</strong> (但其思想在 <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en">20 世纪 60 年代</a>晚期已经第一次提出)</li>
+<li><strong>分层</strong>: <strong>两层</strong>，第一层是用户界面，第二层是业务逻辑和数据存储</li>
+<li>~1980 – C++</li>
+<li><strong>CORBA</strong> – 通用物件请求代理架构(尽管<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://en.wikipedia.org/wiki/Common_Object_Request_Broker_Architecture%23Versions_history">1991年</a>才推出第一个稳定版，但最早使用可以追溯到 <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://en.wikipedia.org/wiki/TIBCO_Software">20 世纪 80 年代</a>)</li>
+<li>~1986 – Erlang</li>
+<li>~1987 – Perl</li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.lri.fr/~mbl/ENS/FONDIHM/2013/papers/Coutaz-Interact87.pdf">1987</a> – PAC 即 <strong>HMVC 模式(Hierarchical Model-View-Controller)</strong></li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://drive.google.com/file/d/0BwhCYaYDn8EgNzAzZjA5ZmItNjU3NS00MzQ5LTkwYjMtMDJhNDU5ZTM0MTlh/view">1988</a> – <strong>LSP(里氏替换原则)</strong> (~SO<strong>L</strong>ID)</li>
+</ul>
+</li>
+<li>20 世纪 90 年代<ul>
+<li><strong>分层</strong>: <strong>三层</strong>，第一层是用户界面，第二层是业务逻辑(以及浏览器作为客户端时的用户界面展现逻辑)，第三层是数据存储</li>
+<li>~1991 – <strong>消息总线</strong></li>
+<li>~1991 – Python</li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://www.amazon.com/Object-Oriented-Software-Engineering-Driven-Approach/dp/0201403471">1992</a> – <strong>EBI 架构</strong>(Entity-Boundary-Interactor) 即 EBC 或 EIC</li>
+<li>~1993 – Ruby　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</li>
+<li>~1995 – Delphi, Java, Javascript, PHP</li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://www.wildcrest.com/Potel/Portfolio/mvp.pdf">1996</a> – <strong>MVP 模式(Model-View-Presenter)</strong></li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">1996</a> – <strong>OCP</strong>, <strong>ISP</strong>, <strong>DIP</strong> (~S<strong>O</strong>L<strong>ID</strong>), REP, CRP, CCP, ADP</li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">1997</a> – SDP, SAP</li>
+<li>~<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://www.cs.ubc.ca/~gregor/papers/kiczales-ECOOP1997-AOP.pdf">1997</a> – <strong>面向方面编程</strong></li>
+<li>~1997 – Web 服务</li>
+<li>~<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://shop.oreilly.com/product/9780596006754.do">1997</a> – <strong>ESB</strong> – 企业服务总线 (尽管创造该术语的书籍2004年才出版，但这个概念早已被使用)</li>
+</ul>
+</li>
+<li>21 世纪 00 年代<ul>
+<li><a target="_blank" rel="noopener" href="http://a.co/7S3sJ2J">2002</a> – <strong>SRP</strong> (~<strong>S</strong>OLID)</li>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215">2003</a> – <strong><a href="/posts/1836512142/">领域驱动设计</a></strong></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/archive/blogs/johngossman/introduction-to-modelviewviewmodel-pattern-for-building-wpf-apps">2005</a> – <strong>MVVM 模式(Model-View-ViewModel)</strong></li>
+<li><a target="_blank" rel="noopener" href="http://alistair.cockburn.us/Hexagonal+architecture">2005</a> – <strong>端口和适配器架构</strong>即六边形架构</li>
+<li><a target="_blank" rel="noopener" href="https://youtu.be/JHGkaShoyNs?t=1m17s">2006</a>? – <strong>CQRS 与 ES</strong> (命令查询职责分离与事件溯源)</li>
+<li><a target="_blank" rel="noopener" href="https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/">2008</a> – <strong>洋葱架构</strong></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/s-c-a-l-e/talking-microservices-with-the-man-who-made-netflix-s-cloud-famous-1032689afed3">2009</a> – <strong>微服务</strong>(Netflix)</li>
+</ul>
+</li>
+<li>21 世纪 10 年代<ul>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.co.uk/Lean-Architecture-Agile-Software-Development/dp/0470684208">2010</a> – <strong>DCI 架构</strong>(Data-Context-Interaction)</li>
+<li><a target="_blank" rel="noopener" href="https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html">2012</a> – <strong>整洁架构</strong></li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://www.codingthearchitecture.com/2014/08/24/c4_model_poster.html">2014</a> – C4 模型</li>
+</ul>
+</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9E%B6%E6%9E%84/" class="category-chain-item">架构</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9E%B6%E6%9E%84/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/" class="category-chain-item">软件架构</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>软件架构编年史</div>
+      <div>https://ponder.red/posts/263832673/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Ponder</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/2993013566/" title="AMQP">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">AMQP</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/2825646904/" title="链路追踪">
+                        <span class="hidden-mobile">链路追踪</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      湘ICP备18017923号
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
