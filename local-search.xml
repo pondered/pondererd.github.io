@@ -121,28 +121,17 @@
     </categories>
     
     
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Redis</title>
-    <link href="/posts/3135569691/"/>
-    <url>/posts/3135569691/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol><li>string<br>最基本的类型。是 key 对应的一个单一值。二进制安全，不比担心由于编码等问题导致二进制数据变化。可以包含任何数据，一个字符串值的最大容量为 512 M</li><li>list<br>字符串列表，按照插入顺序排序。可以添加一个元素到列表的头部或尾部。底层基于列表实现，所以操作头尾效率高，中间效率低</li><li>set<br>是 string 类型的无序集合，基于哈希表实现</li><li>zset<br>和 set 一样也是 string 类型元素的集合，切不允许重复的成员。不同的是每个元素会关联一个 double 类型的分数。redis 通过分数来为集合中的成员进行从小到大的排序。zset 的成员是唯一的，但是分数却可以重复</li><li>hash<br>本身是一个键值对的几个。可以当作 java 中 Map&lt;String, Object&gt; 对待</li></ol><h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><h3 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h3><h4 id="机制"><a href="#机制" class="headerlink" title="机制"></a>机制</h4><p>每个一段时间把内存中的数据作为一个快照保存到硬盘上的文件中。Redis默认开启RDB</p><h4 id="触发方式"><a href="#触发方式" class="headerlink" title="触发方式"></a>触发方式</h4><ol><li>基于默认配置<br>例：<br><code>save 900 1</code>：900秒内至少有一次修改则出发保存操作<br><code>save 300 10</code>：300 秒内至少有10次修改则出发保存操作<br><code>save 60 10000</code>：60秒内至少有1000次修改则出发保存操作</li><li>使用保存命令<br><code>save</code>或<code>bgsave</code></li><li>使用 flushall 命令<br>这个也会产生 dump. rdb 文件，但是里面是空的，没有意义</li><li>服务器关闭<br>如果执行 <code>shutdown</code> 命令让 Redis 正常退出，那么此前Redis就会执行一次持久化保存</li></ol><h3 id="AOF"><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h3><h4 id="机制-1"><a href="#机制-1" class="headerlink" title="机制"></a>机制</h4><p>根据配置文件中制定的策略，把生成数据的命令保存到硬盘上的文件中。</p>]]></content>
-    
-    
-    <categories>
+    <tags>
       
-      <category>计算机</category>
+      <tag>架构</tag>
       
-      <category>数据库</category>
+      <tag>设计</tag>
       
-      <category>Redis</category>
+      <tag>风格</tag>
       
-    </categories>
-    
+      <tag>模式</tag>
+      
+    </tags>
     
   </entry>
   
@@ -172,7 +161,30 @@
   
   
   <entry>
-    <title>cobra</title>
+    <title>Redis</title>
+    <link href="/posts/3135569691/"/>
+    <url>/posts/3135569691/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol><li>string<br>最基本的类型。是 key 对应的一个单一值。二进制安全，不比担心由于编码等问题导致二进制数据变化。可以包含任何数据，一个字符串值的最大容量为 512 M</li><li>list<br>字符串列表，按照插入顺序排序。可以添加一个元素到列表的头部或尾部。底层基于列表实现，所以操作头尾效率高，中间效率低</li><li>set<br>是 string 类型的无序集合，基于哈希表实现</li><li>zset<br>和 set 一样也是 string 类型元素的集合，切不允许重复的成员。不同的是每个元素会关联一个 double 类型的分数。redis 通过分数来为集合中的成员进行从小到大的排序。zset 的成员是唯一的，但是分数却可以重复</li><li>hash<br>本身是一个键值对的几个。可以当作 java 中 Map&lt;String, Object&gt; 对待</li></ol><h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><h3 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h3><h4 id="机制"><a href="#机制" class="headerlink" title="机制"></a>机制</h4><p>每个一段时间把内存中的数据作为一个快照保存到硬盘上的文件中。Redis默认开启RDB</p><h4 id="触发方式"><a href="#触发方式" class="headerlink" title="触发方式"></a>触发方式</h4><ol><li>基于默认配置<br>例：<br><code>save 900 1</code>：900秒内至少有一次修改则出发保存操作<br><code>save 300 10</code>：300 秒内至少有10次修改则出发保存操作<br><code>save 60 10000</code>：60秒内至少有1000次修改则出发保存操作</li><li>使用保存命令<br><code>save</code>或<code>bgsave</code></li><li>使用 flushall 命令<br>这个也会产生 dump. rdb 文件，但是里面是空的，没有意义</li><li>服务器关闭<br>如果执行 <code>shutdown</code> 命令让 Redis 正常退出，那么此前Redis就会执行一次持久化保存</li></ol><h3 id="AOF"><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h3><h4 id="机制-1"><a href="#机制-1" class="headerlink" title="机制"></a>机制</h4><p>根据配置文件中制定的策略，把生成数据的命令保存到硬盘上的文件中。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机</category>
+      
+      <category>数据库</category>
+      
+      <category>Redis</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>cobra 分析</title>
     <link href="/posts/387598377/"/>
     <url>/posts/387598377/</url>
     
@@ -201,11 +213,11 @@
   
   
   <entry>
-    <title>DDD</title>
-    <link href="/posts/1836512142/"/>
-    <url>/posts/1836512142/</url>
+    <title>DDD和Spring结合</title>
+    <link href="/posts/3239946232/"/>
+    <url>/posts/3239946232/</url>
     
-    <content type="html"><![CDATA[<h1 id="DDD"><a href="#DDD" class="headerlink" title="DDD"></a>DDD</h1><h2 id="DDD-介绍"><a href="#DDD-介绍" class="headerlink" title="DDD 介绍"></a>DDD 介绍</h2><h3 id="DDD整体架构"><a href="#DDD整体架构" class="headerlink" title="DDD整体架构"></a>DDD整体架构</h3><img src="/posts/1836512142/images/DDD%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png" alt="">### DDD 分层架构<img src="/posts/1836512142/images/DDD%E6%9E%B6%E6%9E%84.png" alt="DDD分层架构">和 <a href="/posts/2218208641/">MVC</a> 三层架构的区别：1. controller 层更加纯粹，controller 可能会聚合多个 service 层调用。新的分层架构中，则纯粹作为与前端或外部系统交互的数据转换层，不再包含业务逻辑2. service 层改为 Application Services，主要体现在对 service 进行分级，打薄，Application Service 作为更高级别的抽象，新增领域层，抽离原 service 层的部分逻辑到领域服务和领域对象中。3. 领域层分为聚合和领域服务，其中聚合包括实体+值对象，实体和值对象不像 spring 提倡的贫血模型，仅包含 get、set 方法的简单对象，是包含了业务逻辑的丰富对象，即 DDD 所提倡的充血模型对象。<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><ul><li>领域：切分的服务，就是范围。重点是边界， 核心思想就是将问题逐级细分来减低业务和系统的复杂度</li><li>子域：子服务。领域可以进一步划分成子领域。这里是处理高度复杂领域的设计思想，试图分离技术实现的复杂性。子域按重要程度被划分为三类： 核心域、通用域、支撑域</li><li>核心域：核心服务。</li><li>通用域：中间件服务或第三方服务。本身可以通过现有的解决方案即成来完成的服务。</li><li>支撑域：企业公共服务。没它不行，但又打不到核心的价值，围绕着产品内部所需要，但又不能单独变更为第三方服务，即它不是一个通用的服务。</li><li>统一语言（统一概念）：定义上下文的含义。价值是可以解决交流障碍，让每个团队使用统一语言（概念）来交流，甚至可读性更好的代码</li><li>限界上下文（服务职责划分的边界）：定义上下文的边界。领域模型存在边界之内。对于同一概念，不同上下文会有不同的理解。理论上，限界的边界就是微服务的边界。</li><li>聚合（包）：每个包里包含一类实体或者行为，有助于分散系统的复杂性，也是一种高层次的抽象，可以简化对领域模型的理解。<blockquote><p>拆分的实体不能都放在一个服务里，这就涉及到了拆分，有拆分就会有聚合。聚合是为了保证领域内对象之间的一致性问题。<br>在定义聚合的时候，应该遵守不变形约束法则：</p><ol><li>聚合边界内必须具有哪些信息，如果没有这些信息就不能称为一个有效的聚合</li><li>聚合内的某些对象的状态必须满足某个业务规则</li></ol></blockquote></li><li>聚合根（包）：一个上下文内可能包含多个聚合，每个聚合都有一个根实体，叫做聚合根，一个聚合只有一个聚合根</li><li>实体（Domain 或 Entity）：实体是具有身份和连贯性的领域概念，实体也是一个特殊的领域</li><li>值对象（Domain 或 Entity）：为了更好的展示领域模型之间的关系，制定的一个对象，本质上也是一种实体，但是相对实体而言，没有状态和身份标识，存在的目的就是为了表示一个值，通常使用值对象来传达数量的形式来表示</li></ul><h2 id="领域的四种模型"><a href="#领域的四种模型" class="headerlink" title="领域的四种模型"></a>领域的四种模型</h2><ol><li><a href="/posts/2876246174/">失血模型</a></li><li><a href="/posts/2879773850/">贫血模型</a></li><li><a href="/posts/2373614283/">充血模型</a></li><li><a href="/posts/491354674/">胀血模型</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="DDD和Spring结合使用"><a href="#DDD和Spring结合使用" class="headerlink" title="DDD和Spring结合使用"></a>DDD和Spring结合使用</h1><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>模块是 DDD 中明确提到的一种控制限界上下文的手段，一般尽量用一个模块来表示一个领域的限界上下文。<br>一般的工程中包的组织方式为 <code>&#123;com. 公司名. 组织架构. 业务. 上下文.*&#125;</code>，这样的组织结构能够明确的将一个上下文限定在包的内部</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.company.team.bussiness.counter.*; <span class="hljs-comment">// 计数上下文</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.category.*; <span class="hljs-comment">// 分类上下文</span><br></code></pre></td></tr></table></figure><h2 id="领域对象"><a href="#领域对象" class="headerlink" title="领域对象"></a>领域对象</h2><p>对于模块内部的组织结构，一般情况下我们时按照领域对象、领域服务、领域资源库、防腐层等组织方式定义的。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.domain.valobj.*; <span class="hljs-comment">// 领域对象-值对象</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.domain.entity.*; <span class="hljs-comment">// 领域对象-实体</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.domain.aggregate.*; <span class="hljs-comment">// 领域对象-聚合根</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.service.*; <span class="hljs-comment">//领域服务</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.repo.*; <span class="hljs-comment">//领域资源库</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.facade.*; <span class="hljs-comment">// 领域防腐层</span><br></code></pre></td></tr></table></figure><p>领域驱动要解决的一个重要的问题，就是解决对象的贫血问题，而领域对象则最直接的反应了这个能力。<br>我们定义聚合根（文章）和值对象（计数器），来举例说明<br>聚合根持有文章的 Id 和文章的计数器，这里的计数器之所以被列为值对象，而非实体的一个属性，是因为计数器是有多部分组成的，比如真实的阅读量、推广阅读量等。<br>在文章领域对象中，我们需要定义一个方法，来获取文章的计数器，用于页面上的显示，这个逻辑可能会很复杂，涉及到爆文、专栏作者级别、发布时间等因素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.domain.aggregate;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Article</span>&#123;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> CategoryRepository categoryRepository;<br><span class="hljs-keyword">private</span> Long articleId;  <span class="hljs-comment">// 文章id</span><br><span class="hljs-keyword">private</span> ArticleCount articleCount; <span class="hljs-comment">//文章计数器</span><br><br><span class="hljs-comment">// 查询计显示数量，这里简化一些逻辑，甚至是不符合实际业务场景</span><br><span class="hljs-keyword">public</span> Integer <span class="hljs-title function_">getShowArticleCount</span><span class="hljs-params">()</span>&#123;<br><span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.articleCount == <span class="hljs-literal">null</span>)&#123;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.articleCount.realCount + categoryRepository.getCategoryWeight(<span class="hljs-built_in">this</span>.category) + (<span class="hljs-built_in">this</span>.articleCount.addCount) * DayUtils.calDaysByNow(<span class="hljs-built_in">this</span>.articleCount.deadDays);<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="资源库"><a href="#资源库" class="headerlink" title="资源库"></a>资源库</h2><p>资源库可以理解成 Dao，但是比 Dao 更宽泛，存储的手段可以是多样话的，常见的无非是数据库、分布式缓存、本地缓存等。资源库（Repository）的作用，就是对领域的存储和访问进行统一管理的对象。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.ArticleDao; <span class="hljs-comment">// 数据库访问对象-文章</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.CommentDao; <span class="hljs-comment">// 数据库访问对象-评论</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.po.ArticlePO; <span class="hljs-comment">// 数据库持久化对象-文章</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.po.CommentPO; <span class="hljs-comment">// 数据库持久化对象-评论</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.cache.ArticleObj; <span class="hljs-comment">// 分布式缓存访问对象-文章缓存</span><br></code></pre></td></tr></table></figure><p>资源库对外的整体访问由 Repository 提供，它聚合了各个资源库的数据信息，同时也承担了资源存储的逻辑（例如缓存更新机制等等）。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.repo;<br><span class="hljs-meta">@Repository</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ArticleRepository</span>&#123;<br><span class="hljs-meta">@Autowired</span><br><span class="hljs-keyword">private</span> ArticleDao articleDao;<br><span class="hljs-meta">@Autowired</span><br><span class="hljs-keyword">private</span> ArticleDaoCacheAccessObj articleDaoCacheAccessObj;<br><br><span class="hljs-keyword">public</span> Article <span class="hljs-title function_">getArticleById</span><span class="hljs-params">(<span class="hljs-type">int</span> articleId)</span>&#123;<br><span class="hljs-type">Article</span> <span class="hljs-variable">article</span> <span class="hljs-operator">=</span> articleDaoCacheAccessObj.get(articleId);<br><span class="hljs-keyword">if</span>(article != <span class="hljs-literal">null</span>)&#123;<br><span class="hljs-keyword">return</span> article;<br>&#125;<br>article = getArticleFromDB(articleId);<br>articleCacheAccessObj.add(articleId, article);<br><span class="hljs-keyword">return</span> article;<br>&#125;<br><br><span class="hljs-keyword">public</span> Article <span class="hljs-title function_">getArticleFromDB</span><span class="hljs-params">(articleId)</span>&#123;<br><br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>比起讲资源管理放在服务中的做法，由资源库对资源进行管理，职责更加明确，代码的可读性和可维护性也更强。</p><h2 id="防腐层"><a href="#防腐层" class="headerlink" title="防腐层"></a>防腐层</h2><p>也称适配层。在一个上下文中，有时需要对外部上下文进行访问，通常会引入防腐层的概念来对外部上下文的访问进行一次转义。<br>有以下几种情况会考虑到引入防腐层：</p><ol><li>需要讲外部上下文中的模型翻译成本上下文理解的模型</li><li>不同上下文之间的团队没有协作关系，如果是供奉者关系，建议引入防腐层，避免外部上下文变化对本上下文的侵蚀</li><li>该访问本上下文使用广泛，为了避免改动影响范围过大。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.facade;<br><br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ArticleFacade</span>&#123;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> ArticleService articleService;<br><br><span class="hljs-keyword">public</span> Article <span class="hljs-title function_">getArticle</span><span class="hljs-params">(ArticleContext context)</span>&#123;<br><span class="hljs-type">ArticleResponse</span> <span class="hljs-variable">resp</span> <span class="hljs-operator">=</span> articleService.getArticle(context.getArticleId());<br><span class="hljs-keyword">return</span> buildArticle(resp);<br>&#125;<br><br><span class="hljs-keyword">private</span> Article <span class="hljs-title function_">buildArticle</span><span class="hljs-params">(ArticleResponse resp)</span>&#123;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>如果内部多个上下文对外部上下文需要访问，那么可以考虑将其放到通用上下文中。</li></ol><h2 id="领域服务"><a href="#领域服务" class="headerlink" title="领域服务"></a>领域服务</h2><p>我们将领域行为封装到领域对象中，将资源管理行为封装到资源库中，将外部上下文的交互行为封装到防腐层中。此时，我们再回过头来看领域服务时，能狗发现领域服务本身所承载的职责也就更加清晰了，几就是通过串联领域对象、资源库和防腐层等一系列领域内的对象行为，对其他上下文提供交互的接口。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.service.impl;<br><br><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CommentServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">CommentService</span>&#123;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> CommentFacade commentFacade;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> ArticleRepository articleRepository;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> ArticleService articleService;<br><br><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> CommentResponse <span class="hljs-title function_">commentArticle</span><span class="hljs-params">(CommentContext commentContext)</span>&#123;<br><span class="hljs-type">Article</span> <span class="hljs-variable">article</span> <span class="hljs-operator">=</span> articleRepository.getArticleById(commentContext.getArticleId); <span class="hljs-comment">//获取文章聚合根</span><br>commentFacade.doComment(commentContext); <span class="hljs-comment">//增加计数器</span><br><span class="hljs-keyword">return</span> buildCommentResponse(commentContext, article); <span class="hljs-comment">//组装评论后的文章信息</span><br>&#125;<br><br><span class="hljs-keyword">private</span> CommentResponse <span class="hljs-title function_">buildCommentResponse</span><span class="hljs-params">(CommentContext commentContext, Article article)</span>&#123;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="包结构"><a href="#包结构" class="headerlink" title="包结构"></a>包结构</h2><img src="/posts/3239946232/images/%E5%8C%85%E7%BB%93%E6%9E%84.png" alt="">]]></content>
     
     
     <categories>
@@ -226,11 +238,11 @@
   
   
   <entry>
-    <title>DDD和Spring结合</title>
-    <link href="/posts/3239946232/"/>
-    <url>/posts/3239946232/</url>
+    <title>DDD</title>
+    <link href="/posts/1836512142/"/>
+    <url>/posts/1836512142/</url>
     
-    <content type="html"><![CDATA[<h1 id="DDD和Spring结合使用"><a href="#DDD和Spring结合使用" class="headerlink" title="DDD和Spring结合使用"></a>DDD和Spring结合使用</h1><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>模块是 DDD 中明确提到的一种控制限界上下文的手段，一般尽量用一个模块来表示一个领域的限界上下文。<br>一般的工程中包的组织方式为 <code>&#123;com. 公司名. 组织架构. 业务. 上下文.*&#125;</code>，这样的组织结构能够明确的将一个上下文限定在包的内部</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.company.team.bussiness.counter.*; <span class="hljs-comment">// 计数上下文</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.category.*; <span class="hljs-comment">// 分类上下文</span><br></code></pre></td></tr></table></figure><h2 id="领域对象"><a href="#领域对象" class="headerlink" title="领域对象"></a>领域对象</h2><p>对于模块内部的组织结构，一般情况下我们时按照领域对象、领域服务、领域资源库、防腐层等组织方式定义的。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.domain.valobj.*; <span class="hljs-comment">// 领域对象-值对象</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.domain.entity.*; <span class="hljs-comment">// 领域对象-实体</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.domain.aggregate.*; <span class="hljs-comment">// 领域对象-聚合根</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.service.*; <span class="hljs-comment">//领域服务</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.repo.*; <span class="hljs-comment">//领域资源库</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.cms.facade.*; <span class="hljs-comment">// 领域防腐层</span><br></code></pre></td></tr></table></figure><p>领域驱动要解决的一个重要的问题，就是解决对象的贫血问题，而领域对象则最直接的反应了这个能力。<br>我们定义聚合根（文章）和值对象（计数器），来举例说明<br>聚合根持有文章的 Id 和文章的计数器，这里的计数器之所以被列为值对象，而非实体的一个属性，是因为计数器是有多部分组成的，比如真实的阅读量、推广阅读量等。<br>在文章领域对象中，我们需要定义一个方法，来获取文章的计数器，用于页面上的显示，这个逻辑可能会很复杂，涉及到爆文、专栏作者级别、发布时间等因素。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.domain.aggregate;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Article</span>&#123;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> CategoryRepository categoryRepository;<br><span class="hljs-keyword">private</span> Long articleId;  <span class="hljs-comment">// 文章id</span><br><span class="hljs-keyword">private</span> ArticleCount articleCount; <span class="hljs-comment">//文章计数器</span><br><br><span class="hljs-comment">// 查询计显示数量，这里简化一些逻辑，甚至是不符合实际业务场景</span><br><span class="hljs-keyword">public</span> Integer <span class="hljs-title function_">getShowArticleCount</span><span class="hljs-params">()</span>&#123;<br><span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.articleCount == <span class="hljs-literal">null</span>)&#123;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.articleCount.realCount + categoryRepository.getCategoryWeight(<span class="hljs-built_in">this</span>.category) + (<span class="hljs-built_in">this</span>.articleCount.addCount) * DayUtils.calDaysByNow(<span class="hljs-built_in">this</span>.articleCount.deadDays);<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="资源库"><a href="#资源库" class="headerlink" title="资源库"></a>资源库</h2><p>资源库可以理解成 Dao，但是比 Dao 更宽泛，存储的手段可以是多样话的，常见的无非是数据库、分布式缓存、本地缓存等。资源库（Repository）的作用，就是对领域的存储和访问进行统一管理的对象。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.ArticleDao; <span class="hljs-comment">// 数据库访问对象-文章</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.CommentDao; <span class="hljs-comment">// 数据库访问对象-评论</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.po.ArticlePO; <span class="hljs-comment">// 数据库持久化对象-文章</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.dao.po.CommentPO; <span class="hljs-comment">// 数据库持久化对象-评论</span><br><span class="hljs-keyword">import</span> com.company.team.bussiness.repo.cache.ArticleObj; <span class="hljs-comment">// 分布式缓存访问对象-文章缓存</span><br></code></pre></td></tr></table></figure><p>资源库对外的整体访问由 Repository 提供，它聚合了各个资源库的数据信息，同时也承担了资源存储的逻辑（例如缓存更新机制等等）。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.repo;<br><span class="hljs-meta">@Repository</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ArticleRepository</span>&#123;<br><span class="hljs-meta">@Autowired</span><br><span class="hljs-keyword">private</span> ArticleDao articleDao;<br><span class="hljs-meta">@Autowired</span><br><span class="hljs-keyword">private</span> ArticleDaoCacheAccessObj articleDaoCacheAccessObj;<br><br><span class="hljs-keyword">public</span> Article <span class="hljs-title function_">getArticleById</span><span class="hljs-params">(<span class="hljs-type">int</span> articleId)</span>&#123;<br><span class="hljs-type">Article</span> <span class="hljs-variable">article</span> <span class="hljs-operator">=</span> articleDaoCacheAccessObj.get(articleId);<br><span class="hljs-keyword">if</span>(article != <span class="hljs-literal">null</span>)&#123;<br><span class="hljs-keyword">return</span> article;<br>&#125;<br>article = getArticleFromDB(articleId);<br>articleCacheAccessObj.add(articleId, article);<br><span class="hljs-keyword">return</span> article;<br>&#125;<br><br><span class="hljs-keyword">public</span> Article <span class="hljs-title function_">getArticleFromDB</span><span class="hljs-params">(articleId)</span>&#123;<br><br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>比起讲资源管理放在服务中的做法，由资源库对资源进行管理，职责更加明确，代码的可读性和可维护性也更强。</p><h2 id="防腐层"><a href="#防腐层" class="headerlink" title="防腐层"></a>防腐层</h2><p>也称适配层。在一个上下文中，有时需要对外部上下文进行访问，通常会引入防腐层的概念来对外部上下文的访问进行一次转义。<br>有以下几种情况会考虑到引入防腐层：</p><ol><li>需要讲外部上下文中的模型翻译成本上下文理解的模型</li><li>不同上下文之间的团队没有协作关系，如果是供奉者关系，建议引入防腐层，避免外部上下文变化对本上下文的侵蚀</li><li>该访问本上下文使用广泛，为了避免改动影响范围过大。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.facade;<br><br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ArticleFacade</span>&#123;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> ArticleService articleService;<br><br><span class="hljs-keyword">public</span> Article <span class="hljs-title function_">getArticle</span><span class="hljs-params">(ArticleContext context)</span>&#123;<br><span class="hljs-type">ArticleResponse</span> <span class="hljs-variable">resp</span> <span class="hljs-operator">=</span> articleService.getArticle(context.getArticleId());<br><span class="hljs-keyword">return</span> buildArticle(resp);<br>&#125;<br><br><span class="hljs-keyword">private</span> Article <span class="hljs-title function_">buildArticle</span><span class="hljs-params">(ArticleResponse resp)</span>&#123;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>如果内部多个上下文对外部上下文需要访问，那么可以考虑将其放到通用上下文中。</li></ol><h2 id="领域服务"><a href="#领域服务" class="headerlink" title="领域服务"></a>领域服务</h2><p>我们将领域行为封装到领域对象中，将资源管理行为封装到资源库中，将外部上下文的交互行为封装到防腐层中。此时，我们再回过头来看领域服务时，能狗发现领域服务本身所承载的职责也就更加清晰了，几就是通过串联领域对象、资源库和防腐层等一系列领域内的对象行为，对其他上下文提供交互的接口。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.company.team.bussiness.service.impl;<br><br><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CommentServiceImpl</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">CommentService</span>&#123;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> CommentFacade commentFacade;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> ArticleRepository articleRepository;<br><span class="hljs-meta">@Resource</span><br><span class="hljs-keyword">private</span> ArticleService articleService;<br><br><span class="hljs-meta">@Override</span><br><span class="hljs-keyword">public</span> CommentResponse <span class="hljs-title function_">commentArticle</span><span class="hljs-params">(CommentContext commentContext)</span>&#123;<br><span class="hljs-type">Article</span> <span class="hljs-variable">article</span> <span class="hljs-operator">=</span> articleRepository.getArticleById(commentContext.getArticleId); <span class="hljs-comment">//获取文章聚合根</span><br>commentFacade.doComment(commentContext); <span class="hljs-comment">//增加计数器</span><br><span class="hljs-keyword">return</span> buildCommentResponse(commentContext, article); <span class="hljs-comment">//组装评论后的文章信息</span><br>&#125;<br><br><span class="hljs-keyword">private</span> CommentResponse <span class="hljs-title function_">buildCommentResponse</span><span class="hljs-params">(CommentContext commentContext, Article article)</span>&#123;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="包结构"><a href="#包结构" class="headerlink" title="包结构"></a>包结构</h2><img src="/posts/3239946232/images/%E5%8C%85%E7%BB%93%E6%9E%84.png" alt="">]]></content>
+    <content type="html"><![CDATA[<h1 id="DDD"><a href="#DDD" class="headerlink" title="DDD"></a>DDD</h1><h2 id="DDD-介绍"><a href="#DDD-介绍" class="headerlink" title="DDD 介绍"></a>DDD 介绍</h2><h3 id="DDD整体架构"><a href="#DDD整体架构" class="headerlink" title="DDD整体架构"></a>DDD整体架构</h3><img src="/posts/1836512142/images/DDD%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84.png" alt="">### DDD 分层架构<img src="/posts/1836512142/images/DDD%E6%9E%B6%E6%9E%84.png" alt="DDD分层架构">和 <a href="/posts/2218208641/">MVC</a> 三层架构的区别：1. controller 层更加纯粹，controller 可能会聚合多个 service 层调用。新的分层架构中，则纯粹作为与前端或外部系统交互的数据转换层，不再包含业务逻辑2. service 层改为 Application Services，主要体现在对 service 进行分级，打薄，Application Service 作为更高级别的抽象，新增领域层，抽离原 service 层的部分逻辑到领域服务和领域对象中。3. 领域层分为聚合和领域服务，其中聚合包括实体+值对象，实体和值对象不像 spring 提倡的贫血模型，仅包含 get、set 方法的简单对象，是包含了业务逻辑的丰富对象，即 DDD 所提倡的充血模型对象。<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><ul><li>领域：切分的服务，就是范围。重点是边界， 核心思想就是将问题逐级细分来减低业务和系统的复杂度</li><li>子域：子服务。领域可以进一步划分成子领域。这里是处理高度复杂领域的设计思想，试图分离技术实现的复杂性。子域按重要程度被划分为三类： 核心域、通用域、支撑域</li><li>核心域：核心服务。</li><li>通用域：中间件服务或第三方服务。本身可以通过现有的解决方案即成来完成的服务。</li><li>支撑域：企业公共服务。没它不行，但又打不到核心的价值，围绕着产品内部所需要，但又不能单独变更为第三方服务，即它不是一个通用的服务。</li><li>统一语言（统一概念）：定义上下文的含义。价值是可以解决交流障碍，让每个团队使用统一语言（概念）来交流，甚至可读性更好的代码</li><li>限界上下文（服务职责划分的边界）：定义上下文的边界。领域模型存在边界之内。对于同一概念，不同上下文会有不同的理解。理论上，限界的边界就是微服务的边界。</li><li>聚合（包）：每个包里包含一类实体或者行为，有助于分散系统的复杂性，也是一种高层次的抽象，可以简化对领域模型的理解。<blockquote><p>拆分的实体不能都放在一个服务里，这就涉及到了拆分，有拆分就会有聚合。聚合是为了保证领域内对象之间的一致性问题。<br>在定义聚合的时候，应该遵守不变形约束法则：</p><ol><li>聚合边界内必须具有哪些信息，如果没有这些信息就不能称为一个有效的聚合</li><li>聚合内的某些对象的状态必须满足某个业务规则</li></ol></blockquote></li><li>聚合根（包）：一个上下文内可能包含多个聚合，每个聚合都有一个根实体，叫做聚合根，一个聚合只有一个聚合根</li><li>实体（Domain 或 Entity）：实体是具有身份和连贯性的领域概念，实体也是一个特殊的领域</li><li>值对象（Domain 或 Entity）：为了更好的展示领域模型之间的关系，制定的一个对象，本质上也是一种实体，但是相对实体而言，没有状态和身份标识，存在的目的就是为了表示一个值，通常使用值对象来传达数量的形式来表示</li></ul><h2 id="领域的四种模型"><a href="#领域的四种模型" class="headerlink" title="领域的四种模型"></a>领域的四种模型</h2><ol><li><a href="/posts/2876246174/">失血模型</a></li><li><a href="/posts/2879773850/">贫血模型</a></li><li><a href="/posts/2373614283/">充血模型</a></li><li><a href="/posts/491354674/">胀血模型</a></li></ol>]]></content>
     
     
     <categories>
@@ -328,33 +340,6 @@
   
   
   <entry>
-    <title>失血模型</title>
-    <link href="/posts/2876246174/"/>
-    <url>/posts/2876246174/</url>
-    
-    <content type="html"><![CDATA[<h1 id="失血模型"><a href="#失血模型" class="headerlink" title="失血模型"></a>失血模型</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>失血模型中，<code>domain object</code> 只有属性的 <code>get</code>、<code>set</code> 方法的纯数据类，所有的业务逻辑完全由 <code>service</code> 层来完成的，由于没有 <code>dao</code>，<code>Service</code> 直接操作数据库，进行数据持久化</p><p><em>Service</em>：肿胀的服务逻辑<br><em>model</em>：只包含 <code>get/set</code>方法</p><h2 id="事例"><a href="#事例" class="headerlink" title="事例"></a>事例</h2><blockquote><p>Domain Object 只有属性的 <code>getter/setter</code> 方法的纯数据类，所有的业务逻辑完全由 business object 完成 </p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Article</span> &#123;<br><span class="hljs-keyword">private</span> Long id;<br><span class="hljs-keyword">private</span> String title;<br><span class="hljs-keyword">private</span> Long classId;<br><span class="hljs-keyword">private</span> String authorName;<br><span class="hljs-keyword">private</span> Long authorId;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">ArticleDao</span>&#123;<br>Article <span class="hljs-title function_">getArticleById</span><span class="hljs-params">(Long id)</span>;<br>Article <span class="hljs-title function_">findAll</span><span class="hljs-params">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>计算机</category>
-      
-      <category>架构</category>
-      
-      <category>软件架构</category>
-      
-      <category>DDD</category>
-      
-      <category>领域模型</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>胀血模型</title>
     <link href="/posts/491354674/"/>
     <url>/posts/491354674/</url>
@@ -409,6 +394,33 @@
   
   
   <entry>
+    <title>失血模型</title>
+    <link href="/posts/2876246174/"/>
+    <url>/posts/2876246174/</url>
+    
+    <content type="html"><![CDATA[<h1 id="失血模型"><a href="#失血模型" class="headerlink" title="失血模型"></a>失血模型</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>失血模型中，<code>domain object</code> 只有属性的 <code>get</code>、<code>set</code> 方法的纯数据类，所有的业务逻辑完全由 <code>service</code> 层来完成的，由于没有 <code>dao</code>，<code>Service</code> 直接操作数据库，进行数据持久化</p><p><em>Service</em>：肿胀的服务逻辑<br><em>model</em>：只包含 <code>get/set</code>方法</p><h2 id="事例"><a href="#事例" class="headerlink" title="事例"></a>事例</h2><blockquote><p>Domain Object 只有属性的 <code>getter/setter</code> 方法的纯数据类，所有的业务逻辑完全由 business object 完成 </p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Article</span> &#123;<br><span class="hljs-keyword">private</span> Long id;<br><span class="hljs-keyword">private</span> String title;<br><span class="hljs-keyword">private</span> Long classId;<br><span class="hljs-keyword">private</span> String authorName;<br><span class="hljs-keyword">private</span> Long authorId;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">ArticleDao</span>&#123;<br>Article <span class="hljs-title function_">getArticleById</span><span class="hljs-params">(Long id)</span>;<br>Article <span class="hljs-title function_">findAll</span><span class="hljs-params">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机</category>
+      
+      <category>架构</category>
+      
+      <category>软件架构</category>
+      
+      <category>DDD</category>
+      
+      <category>领域模型</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java HashMap源码分析</title>
     <link href="/posts/379/"/>
     <url>/posts/379/</url>
@@ -428,6 +440,14 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>源码分析</tag>
+      
+    </tags>
     
   </entry>
   
@@ -455,6 +475,8 @@
     
     
     <tags>
+      
+      <tag>Java</tag>
       
       <tag>线程</tag>
       
@@ -487,6 +509,8 @@
     
     <tags>
       
+      <tag>Java</tag>
+      
       <tag>源码分析</tag>
       
     </tags>
@@ -516,7 +540,9 @@
     
     <tags>
       
-      <tag>基本数据类型</tag>
+      <tag>数据类型</tag>
+      
+      <tag>Java</tag>
       
     </tags>
     
@@ -543,6 +569,12 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>Go</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -568,7 +600,9 @@
     
     <tags>
       
-      <tag>基本数据类型</tag>
+      <tag>Go</tag>
+      
+      <tag>数据类型</tag>
       
     </tags>
     
@@ -616,6 +650,12 @@
     </categories>
     
     
+    <tags>
+      
+      <tag>Go</tag>
+      
+    </tags>
+    
   </entry>
   
   
@@ -641,7 +681,7 @@
     
     <tags>
       
-      <tag>语法</tag>
+      <tag>Go</tag>
       
     </tags>
     
@@ -667,6 +707,12 @@
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>Go</tag>
+      
+    </tags>
     
   </entry>
   
