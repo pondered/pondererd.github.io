@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="Ponder">
   <meta name="keywords" content="">
@@ -20,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="架构">
 <meta property="og:url" content="https://ponder.red/posts/2408095164/index.html">
-<meta property="og:site_name" content="Ponder">
+<meta property="og:site_name" content="Ponder | 留白">
 <meta property="og:description" content="架构特点 高并发大流量 高可用 海量数据存储 用户分布广泛，网络情况复杂 安全环境恶劣 需求变化快，发布频繁  能力提升途径 垂直伸缩 水平伸缩">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-21T09:57:57.000Z">
@@ -32,7 +34,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>架构 - Ponder</title>
+  <title>架构 - Ponder | 留白</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -70,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":100},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -96,7 +98,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Ponder</strong>
+      <strong>Ponder | 留白</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -257,6 +259,16 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
 
@@ -344,6 +356,11 @@
         </div>
       
       
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年9月27日</div>
+        </div>
+      
       
         <div class="license-meta-item">
           <div>许可协议</div>
@@ -382,8 +399,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/263832673/" title="软件架构编年史">
-                        <span class="hidden-mobile">软件架构编年史</span>
+                      <a href="/posts/3135569691/" title="Redis">
+                        <span class="hidden-mobile">Redis</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -401,12 +418,750 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
 
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="计算机"
+        id="heading-8a2b56e293ee788f1057ad236e06559e" role="tab" data-toggle="collapse" href="#collapse-8a2b56e293ee788f1057ad236e06559e"
+        aria-expanded="true"
+      >
+        计算机
+        <span class="list-group-count">(29)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-8a2b56e293ee788f1057ad236e06559e"
+           role="tabpanel" aria-labelledby="heading-8a2b56e293ee788f1057ad236e06559e">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="数据库"
+        id="heading-68051bf4aa2743b030984b694628ee9c" role="tab" data-toggle="collapse" href="#collapse-68051bf4aa2743b030984b694628ee9c"
+        aria-expanded="false"
+      >
+        数据库
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-68051bf4aa2743b030984b694628ee9c"
+           role="tabpanel" aria-labelledby="heading-68051bf4aa2743b030984b694628ee9c">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Redis"
+        id="heading-e111446745a1825b862f8727ae63bce4" role="tab" data-toggle="collapse" href="#collapse-e111446745a1825b862f8727ae63bce4"
+        aria-expanded="false"
+      >
+        Redis
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-e111446745a1825b862f8727ae63bce4"
+           role="tabpanel" aria-labelledby="heading-e111446745a1825b862f8727ae63bce4">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/3135569691/" title="Redis"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Redis</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="架构"
+        id="heading-0eaa6af97d68cc910c54feed58ad05dd" role="tab" data-toggle="collapse" href="#collapse-0eaa6af97d68cc910c54feed58ad05dd"
+        aria-expanded="true"
+      >
+        架构
+        <span class="list-group-count">(16)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-0eaa6af97d68cc910c54feed58ad05dd"
+           role="tabpanel" aria-labelledby="heading-0eaa6af97d68cc910c54feed58ad05dd">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/2408095164/" title="架构"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">架构</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/226486905/" title="架构、设计、风格、模式解释"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">架构、设计、风格、模式解释</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="软件架构"
+        id="heading-a43fe53587378e6365b979bdfcdac171" role="tab" data-toggle="collapse" href="#collapse-a43fe53587378e6365b979bdfcdac171"
+        aria-expanded="false"
+      >
+        软件架构
+        <span class="list-group-count">(14)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a43fe53587378e6365b979bdfcdac171"
+           role="tabpanel" aria-labelledby="heading-a43fe53587378e6365b979bdfcdac171">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/263832673/" title="软件架构编年史"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">软件架构编年史</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="DDD"
+        id="heading-45054f47ac3305a2a33e9bcceadff712" role="tab" data-toggle="collapse" href="#collapse-45054f47ac3305a2a33e9bcceadff712"
+        aria-expanded="false"
+      >
+        DDD
+        <span class="list-group-count">(12)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-45054f47ac3305a2a33e9bcceadff712"
+           role="tabpanel" aria-labelledby="heading-45054f47ac3305a2a33e9bcceadff712">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/1836512142/" title="DDD"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/3778015330/" title="DDD 实战"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD 实战</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/3239946232/" title="DDD和Spring结合"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD和Spring结合</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/485079eb/" title="DDD详解-第一讲[转载]"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD详解-第一讲[转载]</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/3260840243/" title="DDD详解-第三讲[转载]"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD详解-第三讲[转载]</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/983808872/" title="DDD详解-第二讲[转载]"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD详解-第二讲[转载]</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/817307754/" title="DDD详解-第五讲[转载]"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD详解-第五讲[转载]</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/2982464541/" title="DDD详解-第四讲[转载]"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD详解-第四讲[转载]</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="领域模型"
+        id="heading-37b6bd0b5b9c06798a66be3c62dd6b59" role="tab" data-toggle="collapse" href="#collapse-37b6bd0b5b9c06798a66be3c62dd6b59"
+        aria-expanded="false"
+      >
+        领域模型
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-37b6bd0b5b9c06798a66be3c62dd6b59"
+           role="tabpanel" aria-labelledby="heading-37b6bd0b5b9c06798a66be3c62dd6b59">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/2373614283/" title="充血模型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">充血模型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/2876246174/" title="失血模型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">失血模型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/491354674/" title="胀血模型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">胀血模型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/2879773850/" title="贫血模型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">贫血模型</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="MVC"
+        id="heading-0b9221b0599697618c27449e89d9b07a" role="tab" data-toggle="collapse" href="#collapse-0b9221b0599697618c27449e89d9b07a"
+        aria-expanded="false"
+      >
+        MVC
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-0b9221b0599697618c27449e89d9b07a"
+           role="tabpanel" aria-labelledby="heading-0b9221b0599697618c27449e89d9b07a">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/2218208641/" title="MVC"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">MVC</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="框架"
+        id="heading-41f1d2b62436eded1a6776504b6895d7" role="tab" data-toggle="collapse" href="#collapse-41f1d2b62436eded1a6776504b6895d7"
+        aria-expanded="false"
+      >
+        框架
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-41f1d2b62436eded1a6776504b6895d7"
+           role="tabpanel" aria-labelledby="heading-41f1d2b62436eded1a6776504b6895d7">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="cobra"
+        id="heading-b2afdf253f6c1391022115bbca0cd8b0" role="tab" data-toggle="collapse" href="#collapse-b2afdf253f6c1391022115bbca0cd8b0"
+        aria-expanded="false"
+      >
+        cobra
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-b2afdf253f6c1391022115bbca0cd8b0"
+           role="tabpanel" aria-labelledby="heading-b2afdf253f6c1391022115bbca0cd8b0">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/387598377/" title="cobra 分析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">cobra 分析</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编程语言"
+        id="heading-3bf8a523aea21a3a0f6c53b0f43429bb" role="tab" data-toggle="collapse" href="#collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+        aria-expanded="false"
+      >
+        编程语言
+        <span class="list-group-count">(10)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-3bf8a523aea21a3a0f6c53b0f43429bb"
+           role="tabpanel" aria-labelledby="heading-3bf8a523aea21a3a0f6c53b0f43429bb">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/356/" title="快速学会一门语言的50%"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">快速学会一门语言的50%</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Go"
+        id="heading-5f075ae3e1f9d0382bb8c4632991f96f" role="tab" data-toggle="collapse" href="#collapse-5f075ae3e1f9d0382bb8c4632991f96f"
+        aria-expanded="false"
+      >
+        Go
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-5f075ae3e1f9d0382bb8c4632991f96f"
+           role="tabpanel" aria-labelledby="heading-5f075ae3e1f9d0382bb8c4632991f96f">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/364/" title="Go函数"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Go函数</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/366/" title="Go指针"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Go指针</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/367/" title="Go数据类型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Go数据类型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/368/" title="Go编译模式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Go编译模式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/369/" title="Go语法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Go语法</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Java"
+        id="heading-d52387880e1ea22817a72d3759213819" role="tab" data-toggle="collapse" href="#collapse-d52387880e1ea22817a72d3759213819"
+        aria-expanded="false"
+      >
+        Java
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-d52387880e1ea22817a72d3759213819"
+           role="tabpanel" aria-labelledby="heading-d52387880e1ea22817a72d3759213819">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/374/" title="Java 数据类型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Java 数据类型</span>
+        </a>
+      
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="源码"
+        id="heading-5b804b05e14aaacc75033a4f77fc2844" role="tab" data-toggle="collapse" href="#collapse-5b804b05e14aaacc75033a4f77fc2844"
+        aria-expanded="false"
+      >
+        源码
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-5b804b05e14aaacc75033a4f77fc2844"
+           role="tabpanel" aria-labelledby="heading-5b804b05e14aaacc75033a4f77fc2844">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/379/" title="Java HashMap源码分析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Java HashMap源码分析</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/380/" title="Java String源码分析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Java String源码分析</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="线程"
+        id="heading-d276123c8bf8dabf3ae03a2a571acd43" role="tab" data-toggle="collapse" href="#collapse-d276123c8bf8dabf3ae03a2a571acd43"
+        aria-expanded="false"
+      >
+        线程
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-d276123c8bf8dabf3ae03a2a571acd43"
+           role="tabpanel" aria-labelledby="heading-d276123c8bf8dabf3ae03a2a571acd43">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/382/" title="Java线程"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Java线程</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="编译原理"
+        id="heading-750cc643fac4dc07e3493ac64ffc215c" role="tab" data-toggle="collapse" href="#collapse-750cc643fac4dc07e3493ac64ffc215c"
+        aria-expanded="false"
+      >
+        编译原理
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-750cc643fac4dc07e3493ac64ffc215c"
+           role="tabpanel" aria-labelledby="heading-750cc643fac4dc07e3493ac64ffc215c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/355/" title="编译原理"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">编译原理</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
 
 
   </aside>
@@ -486,6 +1241,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
     <!-- 备案信息 ICP for China -->

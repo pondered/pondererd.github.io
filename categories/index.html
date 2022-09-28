@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="Ponder">
   <meta name="keywords" content="">
@@ -20,7 +22,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="分类">
 <meta property="og:url" content="https://ponder.red/categories/index.html">
-<meta property="og:site_name" content="Ponder">
+<meta property="og:site_name" content="Ponder | 留白">
 <meta property="og:description" content="生如蚁而美如神">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Ponder">
@@ -30,7 +32,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>分类 - Ponder</title>
+  <title>分类 - Ponder | 留白</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -62,7 +64,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":100},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,7 +90,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Ponder</strong>
+      <strong>Ponder | 留白</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -364,6 +366,15 @@
     
       
       
+        <a href="/posts/485079eb/" title="DDD详解-第一讲[转载]"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">DDD详解-第一讲[转载]</span>
+        </a>
+      
+    
+      
+      
         <a href="/posts/817307754/" title="DDD详解-第五讲[转载]"
            class="list-group-item list-group-item-action
            ">
@@ -400,19 +411,10 @@
     
       
       
-        <a href="/posts/485079eb/" title="DDD详解-第一讲[转载]"
+        <a href="/posts/1836512142/" title="DDD"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">DDD详解-第一讲[转载]</span>
-        </a>
-      
-    
-      
-      
-        <a href="/posts/3778015330/" title="DDD 实战"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">DDD 实战</span>
+          <span class="category-post">DDD</span>
         </a>
       
     
@@ -427,10 +429,10 @@
     
       
       
-        <a href="/posts/1836512142/" title="DDD"
+        <a href="/posts/3778015330/" title="DDD 实战"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">DDD</span>
+          <span class="category-post">DDD 实战</span>
         </a>
       
     
@@ -1223,22 +1225,22 @@
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="历史"
-        id="heading-c827d8dbb76ce33219f64c6749893159" role="tab" data-toggle="collapse" href="#collapse-c827d8dbb76ce33219f64c6749893159"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="政治军事"
+        id="heading-b250a513c02dc0df2ef8c01104b36b69" role="tab" data-toggle="collapse" href="#collapse-b250a513c02dc0df2ef8c01104b36b69"
         aria-expanded="false"
       >
-        历史
+        政治军事
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E5%8E%86%E5%8F%B2/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E6%94%BF%E6%B2%BB%E5%86%9B%E4%BA%8B/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
           <span>1</span>
         </a>
       
-      <div class="category-collapse collapse " id="collapse-c827d8dbb76ce33219f64c6749893159"
-           role="tabpanel" aria-labelledby="heading-c827d8dbb76ce33219f64c6749893159">
+      <div class="category-collapse collapse " id="collapse-b250a513c02dc0df2ef8c01104b36b69"
+           role="tabpanel" aria-labelledby="heading-b250a513c02dc0df2ef8c01104b36b69">
         
         
           
@@ -1247,10 +1249,52 @@
     
       
       
-        <a href="/posts/814416/" title="脂砚斋评石头记（全集）"
+        <a href="/posts/24275777/" title="政治学通识"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">脂砚斋评石头记（全集）</span>
+          <span class="category-post">政治学通识</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="人物传记"
+        id="heading-774755b7644bb36d6a1216ea41c2798d" role="tab" data-toggle="collapse" href="#collapse-774755b7644bb36d6a1216ea41c2798d"
+        aria-expanded="false"
+      >
+        人物传记
+        <span class="list-group-count"></span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+        <a href="/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0/" class="category-count col-2 col-md-1 col-xm-1">
+          <i class="iconfont icon-articles"></i>
+          <span>1</span>
+        </a>
+      
+      <div class="category-collapse collapse " id="collapse-774755b7644bb36d6a1216ea41c2798d"
+           role="tabpanel" aria-labelledby="heading-774755b7644bb36d6a1216ea41c2798d">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/816218/" title="苏格兰女王的悲剧（玛丽·斯图亚特传）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">苏格兰女王的悲剧（玛丽·斯图亚特传）</span>
         </a>
       
     
@@ -1307,22 +1351,22 @@
     
     <div class="category-sub row nomargin-x">
       <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="人物传记"
-        id="heading-774755b7644bb36d6a1216ea41c2798d" role="tab" data-toggle="collapse" href="#collapse-774755b7644bb36d6a1216ea41c2798d"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="历史"
+        id="heading-c827d8dbb76ce33219f64c6749893159" role="tab" data-toggle="collapse" href="#collapse-c827d8dbb76ce33219f64c6749893159"
         aria-expanded="false"
       >
-        人物传记
+        历史
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E4%BA%BA%E7%89%A9%E4%BC%A0%E8%AE%B0/" class="category-count col-2 col-md-1 col-xm-1">
+        <a href="/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E5%8E%86%E5%8F%B2/" class="category-count col-2 col-md-1 col-xm-1">
           <i class="iconfont icon-articles"></i>
           <span>1</span>
         </a>
       
-      <div class="category-collapse collapse " id="collapse-774755b7644bb36d6a1216ea41c2798d"
-           role="tabpanel" aria-labelledby="heading-774755b7644bb36d6a1216ea41c2798d">
+      <div class="category-collapse collapse " id="collapse-c827d8dbb76ce33219f64c6749893159"
+           role="tabpanel" aria-labelledby="heading-c827d8dbb76ce33219f64c6749893159">
         
         
           
@@ -1331,10 +1375,10 @@
     
       
       
-        <a href="/posts/816218/" title="苏格兰女王的悲剧（玛丽·斯图亚特传）"
+        <a href="/posts/814416/" title="脂砚斋评石头记（全集）"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">苏格兰女王的悲剧（玛丽·斯图亚特传）</span>
+          <span class="category-post">脂砚斋评石头记（全集）</span>
         </a>
       
     
@@ -1419,48 +1463,6 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">简单之美：软件开发实践者的思考</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div class="category-sub row nomargin-x">
-      <a class="category-subitem collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="政治军事"
-        id="heading-b250a513c02dc0df2ef8c01104b36b69" role="tab" data-toggle="collapse" href="#collapse-b250a513c02dc0df2ef8c01104b36b69"
-        aria-expanded="false"
-      >
-        政治军事
-        <span class="list-group-count"></span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-        <a href="/categories/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/%E6%94%BF%E6%B2%BB%E5%86%9B%E4%BA%8B/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
-          <span>1</span>
-        </a>
-      
-      <div class="category-collapse collapse " id="collapse-b250a513c02dc0df2ef8c01104b36b69"
-           role="tabpanel" aria-labelledby="heading-b250a513c02dc0df2ef8c01104b36b69">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/posts/24275777/" title="政治学通识"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">政治学通识</span>
         </a>
       
     
@@ -1576,6 +1578,30 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -1639,6 +1665,8 @@
 
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

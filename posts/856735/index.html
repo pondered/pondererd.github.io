@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="轻阅读编写组">
   <meta name="keywords" content="">
@@ -20,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何阅读一本书">
 <meta property="og:url" content="https://ponder.red/posts/856735/index.html">
-<meta property="og:site_name" content="Ponder">
+<meta property="og:site_name" content="Ponder | 留白">
 <meta property="og:description" content="元数据 [!abstract] 如何阅读一本书   书名： 如何阅读一本书 作者： 轻阅读编写组 简介： 读懂一本书，精于一件事，好方法比努力更重要。这是一本可靠的阅读技巧训练手册！每天8分钟，让你读得快、记得牢、学得透。林语堂、余秋雨、周国平倾情推荐你学会阅读！ 出版时间 2017-03-01 00:00:00 ISBN： 9787513911504 分类： 生活百科-育儿 出版社： 民主与建设">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://wfqqreader-1252317822.image.myqcloud.com/cover/735/856735/t7_856735.jpg">
@@ -34,7 +36,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>如何阅读一本书 - Ponder</title>
+  <title>如何阅读一本书 - Ponder | 留白</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -72,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"ponder.red","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":100},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -98,7 +100,7 @@
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Ponder</strong>
+      <strong>Ponder | 留白</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -259,6 +261,16 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
 
@@ -359,6 +371,11 @@
         </div>
       
       
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年9月26日</div>
+        </div>
+      
       
         <div class="license-meta-item">
           <div>许可协议</div>
@@ -416,12 +433,417 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
+  <aside class="sidebar category-bar" style="margin-left: -1rem">
+    
 
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="微信读书"
+        id="heading-664b5d039b78fe3d81097e9977924823" role="tab" data-toggle="collapse" href="#collapse-664b5d039b78fe3d81097e9977924823"
+        aria-expanded="true"
+      >
+        微信读书
+        <span class="list-group-count">(13)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-664b5d039b78fe3d81097e9977924823"
+           role="tabpanel" aria-labelledby="heading-664b5d039b78fe3d81097e9977924823">
+        
+        
+          
+          
+  <div class="category-post-list">
+    
+    
+  </div>
+
+          
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="人物传记"
+        id="heading-774755b7644bb36d6a1216ea41c2798d" role="tab" data-toggle="collapse" href="#collapse-774755b7644bb36d6a1216ea41c2798d"
+        aria-expanded="false"
+      >
+        人物传记
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-774755b7644bb36d6a1216ea41c2798d"
+           role="tabpanel" aria-labelledby="heading-774755b7644bb36d6a1216ea41c2798d">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/816218/" title="苏格兰女王的悲剧（玛丽·斯图亚特传）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">苏格兰女王的悲剧（玛丽·斯图亚特传）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="历史"
+        id="heading-c827d8dbb76ce33219f64c6749893159" role="tab" data-toggle="collapse" href="#collapse-c827d8dbb76ce33219f64c6749893159"
+        aria-expanded="false"
+      >
+        历史
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-c827d8dbb76ce33219f64c6749893159"
+           role="tabpanel" aria-labelledby="heading-c827d8dbb76ce33219f64c6749893159">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/814416/" title="脂砚斋评石头记（全集）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">脂砚斋评石头记（全集）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="哲学宗教"
+        id="heading-6b173203a54fcd9eab836b0b09fecac8" role="tab" data-toggle="collapse" href="#collapse-6b173203a54fcd9eab836b0b09fecac8"
+        aria-expanded="false"
+      >
+        哲学宗教
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-6b173203a54fcd9eab836b0b09fecac8"
+           role="tabpanel" aria-labelledby="heading-6b173203a54fcd9eab836b0b09fecac8">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/821598/" title="哲学家们都干了些什么"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">哲学家们都干了些什么</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="政治军事"
+        id="heading-b250a513c02dc0df2ef8c01104b36b69" role="tab" data-toggle="collapse" href="#collapse-b250a513c02dc0df2ef8c01104b36b69"
+        aria-expanded="false"
+      >
+        政治军事
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-b250a513c02dc0df2ef8c01104b36b69"
+           role="tabpanel" aria-labelledby="heading-b250a513c02dc0df2ef8c01104b36b69">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/24275777/" title="政治学通识"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">政治学通识</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="文学"
+        id="heading-e937addbf1e68f9092c41c5ea9e0871c" role="tab" data-toggle="collapse" href="#collapse-e937addbf1e68f9092c41c5ea9e0871c"
+        aria-expanded="false"
+      >
+        文学
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-e937addbf1e68f9092c41c5ea9e0871c"
+           role="tabpanel" aria-labelledby="heading-e937addbf1e68f9092c41c5ea9e0871c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/814401/" title="东周列国志：中国古典白话短篇小说的巅峰"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">东周列国志：中国古典白话短篇小说的巅峰</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/814400/" title="聊斋志异"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">聊斋志异</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="生活百科"
+        id="heading-bb96d261b1ab1c280d54d23c761cc33c" role="tab" data-toggle="collapse" href="#collapse-bb96d261b1ab1c280d54d23c761cc33c"
+        aria-expanded="true"
+      >
+        生活百科
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-bb96d261b1ab1c280d54d23c761cc33c"
+           role="tabpanel" aria-labelledby="heading-bb96d261b1ab1c280d54d23c761cc33c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/856735/" title="如何阅读一本书"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">如何阅读一本书</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="精品小说"
+        id="heading-a1e1a4d91c40102041fe908501fde95c" role="tab" data-toggle="collapse" href="#collapse-a1e1a4d91c40102041fe908501fde95c"
+        aria-expanded="false"
+      >
+        精品小说
+        <span class="list-group-count">(2)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-a1e1a4d91c40102041fe908501fde95c"
+           role="tabpanel" aria-labelledby="heading-a1e1a4d91c40102041fe908501fde95c">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/230110/" title="嫌疑人X的献身"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">嫌疑人X的献身</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/230107/" title="白夜行"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">白夜行</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="经济理财"
+        id="heading-9a2482ae1064c461abbc3964beea7e91" role="tab" data-toggle="collapse" href="#collapse-9a2482ae1064c461abbc3964beea7e91"
+        aria-expanded="false"
+      >
+        经济理财
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-9a2482ae1064c461abbc3964beea7e91"
+           role="tabpanel" aria-labelledby="heading-9a2482ae1064c461abbc3964beea7e91">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/33362049/" title="结构性改革"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">结构性改革</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/39481983/" title="美元真相"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">美元真相</span>
+        </a>
+      
+    
+      
+      
+        <a href="/posts/184066/" title="货币论（全两册）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">货币论（全两册）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem collapsed
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="计算机"
+        id="heading-8a2b56e293ee788f1057ad236e06559e" role="tab" data-toggle="collapse" href="#collapse-8a2b56e293ee788f1057ad236e06559e"
+        aria-expanded="false"
+      >
+        计算机
+        <span class="list-group-count">(1)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse " id="collapse-8a2b56e293ee788f1057ad236e06559e"
+           role="tabpanel" aria-labelledby="heading-8a2b56e293ee788f1057ad236e06559e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/posts/602534/" title="简单之美：软件开发实践者的思考"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">简单之美：软件开发实践者的思考</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+        
+      </div>
+    </div>
+  
+</div>
 
 
   </aside>
@@ -501,6 +923,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
     <!-- 备案信息 ICP for China -->
