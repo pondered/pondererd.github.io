@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>聊斋志异</title>
+    <link href="/posts/1/"/>
+    <url>/posts/1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>文学</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>DDD详解-第一讲[转载]</title>
     <link href="/posts/485079eb/"/>
     <url>/posts/485079eb/</url>
@@ -169,21 +190,27 @@
   
   
   <entry>
-    <title>架构</title>
-    <link href="/posts/2408095164/"/>
-    <url>/posts/2408095164/</url>
+    <title>政治学通识</title>
+    <link href="/posts/24275777/"/>
+    <url>/posts/24275777/</url>
     
-    <content type="html"><![CDATA[<h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul><li>高并发大流量</li><li>高可用</li><li>海量数据存储</li><li>用户分布广泛，网络情况复杂</li><li>安全环境恶劣</li><li>需求变化快，发布频繁</li></ul><h2 id="能力提升途径"><a href="#能力提升途径" class="headerlink" title="能力提升途径"></a>能力提升途径</h2><ul><li>垂直伸缩</li><li>水平伸缩</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 政治学通识</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/777/24275777/t7_24275777.jpg" alt=" 政治学通识|200"></li><li>书名： 政治学通识</li><li>作者： 包刚升</li><li>简介： 《政治的常识》是作者在复旦大学政治学课程讲义的基础上修改润色而成的。本书力求成为一部通俗易懂、深入浅出的政治学普及入门读物。这部书正是为那些对政治和公共事务感兴趣的读者朋友们而写的。通过本书，作者希望能够帮助读者加深对中国政治与世界政治的认知，帮助读者理解政治学领域的重大议题、主要理论与基本方法，帮助读者养成健全与系统的政治思考能力。</li><li>出版时间 2019-04-01 00:00:00</li><li>ISBN： 9787301263525</li><li>分类： 政治军事-政治</li><li>出版社： 北京大学出版社</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="为什么政治很重要？（代序）"><a href="#为什么政治很重要？（代序）" class="headerlink" title="为什么政治很重要？（代序）"></a>为什么政治很重要？（代序）</h2><h3 id="划线评论"><a href="#划线评论" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 技术解决方案能否成为一种公共政策，是政策背后的政治决定的。比如，有些措施从技术层面来看是可行的，但是从政治层面来看却难以实施。这样，此种技术解决方案就会被否决掉。因此，治理雾霾貌似是一个技术问题，其实也是一个政治问题。  ^7570425-7Cz8gfaIR<ul><li>💭 这里的政治层面具体是指的是什么？ 如果只是政治层面四个字的话就显得太宽泛了，很多事情都可以用这四个字来形容</li><li>⏱ 2022-09-26 21:07:51</li></ul></li></ul><h3 id="划线评论-1"><a href="#划线评论-1" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 政治  ^7570425-7Cz7Ghlfi<ul><li>💭 什么是政治？<br>政治有边界么？如果有那边界在哪里？</li><li>⏱ 2022-09-26 20:59:00</li></ul></li></ul><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
     
     
     <categories>
       
-      <category>计算机</category>
+      <category>微信读书</category>
       
-      <category>架构</category>
+      <category>政治军事</category>
       
     </categories>
     
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
     
   </entry>
   
@@ -223,29 +250,21 @@
   
   
   <entry>
-    <title>cobra 分析</title>
-    <link href="/posts/387598377/"/>
-    <url>/posts/387598377/</url>
+    <title>架构</title>
+    <link href="/posts/2408095164/"/>
+    <url>/posts/2408095164/</url>
     
-    <content type="html"><![CDATA[<h1 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h1><p> <code>cobra</code> 是一个命令行程序库，可以用来编写命令行程序。</p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li>支持子命令, 如 <code>app server</code>等</li><li>兼容POXIS选项</li><li>嵌套子命令</li><li>全局、本地层级选项，可以在多处设置选项，按照一定的顺序取用</li></ul><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul><li>命令(Command)：就是需要执行的操作</li><li>参数(Arg)：命令的参数，即要操作的对象</li><li>选项(Flag)：命令选项可以调整命令的行为<br>例：<br><code>hugo server --port=1313</code><br>其中 <code>server</code> 是子命令，<code>--port</code> 是参数<br><code>git clone URL --bare</code><br>其中 <code>clone</code> 是子命令，<code>URL</code> 是参数，<code>--bare</code>是选项</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ccard">type: folder_brief_live<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul><li>高并发大流量</li><li>高可用</li><li>海量数据存储</li><li>用户分布广泛，网络情况复杂</li><li>安全环境恶劣</li><li>需求变化快，发布频繁</li></ul><h2 id="能力提升途径"><a href="#能力提升途径" class="headerlink" title="能力提升途径"></a>能力提升途径</h2><ul><li>垂直伸缩</li><li>水平伸缩</li></ul>]]></content>
     
     
     <categories>
       
       <category>计算机</category>
       
-      <category>框架</category>
-      
-      <category>cobra</category>
+      <category>架构</category>
       
     </categories>
     
-    
-    <tags>
-      
-      <tag>Go</tag>
-      
-    </tags>
     
   </entry>
   
@@ -269,6 +288,35 @@
       
     </categories>
     
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>cobra 分析</title>
+    <link href="/posts/387598377/"/>
+    <url>/posts/387598377/</url>
+    
+    <content type="html"><![CDATA[<h1 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h1><p> <code>cobra</code> 是一个命令行程序库，可以用来编写命令行程序。</p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li>支持子命令, 如 <code>app server</code>等</li><li>兼容POXIS选项</li><li>嵌套子命令</li><li>全局、本地层级选项，可以在多处设置选项，按照一定的顺序取用</li></ul><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul><li>命令(Command)：就是需要执行的操作</li><li>参数(Arg)：命令的参数，即要操作的对象</li><li>选项(Flag)：命令选项可以调整命令的行为<br>例：<br><code>hugo server --port=1313</code><br>其中 <code>server</code> 是子命令，<code>--port</code> 是参数<br><code>git clone URL --bare</code><br>其中 <code>clone</code> 是子命令，<code>URL</code> 是参数，<code>--bare</code>是选项</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ccard">type: folder_brief_live<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机</category>
+      
+      <category>框架</category>
+      
+      <category>cobra</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Go</tag>
+      
+    </tags>
     
   </entry>
   
@@ -453,11 +501,11 @@
   
   
   <entry>
-    <title>失血模型</title>
-    <link href="/posts/2876246174/"/>
-    <url>/posts/2876246174/</url>
+    <title>胀血模型</title>
+    <link href="/posts/491354674/"/>
+    <url>/posts/491354674/</url>
     
-    <content type="html"><![CDATA[<h1 id="失血模型"><a href="#失血模型" class="headerlink" title="失血模型"></a>失血模型</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>失血模型中，<code>domain object</code> 只有属性的 <code>get</code>、<code>set</code> 方法的纯数据类，所有的业务逻辑完全由 <code>service</code> 层来完成的，由于没有 <code>dao</code>，<code>Service</code> 直接操作数据库，进行数据持久化</p><p><em>Service</em>：肿胀的服务逻辑<br><em>model</em>：只包含 <code>get/set</code>方法</p><h2 id="事例"><a href="#事例" class="headerlink" title="事例"></a>事例</h2><blockquote><p>Domain Object 只有属性的 <code>getter/setter</code> 方法的纯数据类，所有的业务逻辑完全由 business object 完成 </p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Article</span> &#123;<br><span class="hljs-keyword">private</span> Long id;<br><span class="hljs-keyword">private</span> String title;<br><span class="hljs-keyword">private</span> Long classId;<br><span class="hljs-keyword">private</span> String authorName;<br><span class="hljs-keyword">private</span> Long authorId;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">ArticleDao</span>&#123;<br>Article <span class="hljs-title function_">getArticleById</span><span class="hljs-params">(Long id)</span>;<br>Article <span class="hljs-title function_">findAll</span><span class="hljs-params">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="胀血模型"><a href="#胀血模型" class="headerlink" title="胀血模型"></a>胀血模型</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>胀血模型取消了 <code>service</code> 层，只剩下 <code>domain object</code> 和 <code>dao</code> 两层，在<code>domain object</code>的<code>domain logic</code>上面封装事务</p><h2 id="事例"><a href="#事例" class="headerlink" title="事例"></a>事例</h2><blockquote><p>直接取消 Service 层，只剩下 Domain Object 和 Dao 两层，在 Domain Object 的 Domain Logic 上面封装事务<br> Domain Object（事务封装，业务逻辑）&lt;–&gt; Dao</p></blockquote><p>优点：</p><ol><li>简化了分层</li><li>也算符合OO<br>缺点：</li><li>很多不是 Domain Logic 的 Service 逻辑也被强行放入 Domain Object，引起了 Domain Object 模型的很不稳定</li><li>Domain Object 暴露给 Web 层过多信息，可能引起意想不到的副作用</li></ol>]]></content>
     
     
     <categories>
@@ -488,11 +536,11 @@
   
   
   <entry>
-    <title>胀血模型</title>
-    <link href="/posts/491354674/"/>
-    <url>/posts/491354674/</url>
+    <title>失血模型</title>
+    <link href="/posts/2876246174/"/>
+    <url>/posts/2876246174/</url>
     
-    <content type="html"><![CDATA[<h1 id="胀血模型"><a href="#胀血模型" class="headerlink" title="胀血模型"></a>胀血模型</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>胀血模型取消了 <code>service</code> 层，只剩下 <code>domain object</code> 和 <code>dao</code> 两层，在<code>domain object</code>的<code>domain logic</code>上面封装事务</p><h2 id="事例"><a href="#事例" class="headerlink" title="事例"></a>事例</h2><blockquote><p>直接取消 Service 层，只剩下 Domain Object 和 Dao 两层，在 Domain Object 的 Domain Logic 上面封装事务<br> Domain Object（事务封装，业务逻辑）&lt;–&gt; Dao</p></blockquote><p>优点：</p><ol><li>简化了分层</li><li>也算符合OO<br>缺点：</li><li>很多不是 Domain Logic 的 Service 逻辑也被强行放入 Domain Object，引起了 Domain Object 模型的很不稳定</li><li>Domain Object 暴露给 Web 层过多信息，可能引起意想不到的副作用</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="失血模型"><a href="#失血模型" class="headerlink" title="失血模型"></a>失血模型</h1><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>失血模型中，<code>domain object</code> 只有属性的 <code>get</code>、<code>set</code> 方法的纯数据类，所有的业务逻辑完全由 <code>service</code> 层来完成的，由于没有 <code>dao</code>，<code>Service</code> 直接操作数据库，进行数据持久化</p><p><em>Service</em>：肿胀的服务逻辑<br><em>model</em>：只包含 <code>get/set</code>方法</p><h2 id="事例"><a href="#事例" class="headerlink" title="事例"></a>事例</h2><blockquote><p>Domain Object 只有属性的 <code>getter/setter</code> 方法的纯数据类，所有的业务逻辑完全由 business object 完成 </p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Article</span> &#123;<br><span class="hljs-keyword">private</span> Long id;<br><span class="hljs-keyword">private</span> String title;<br><span class="hljs-keyword">private</span> Long classId;<br><span class="hljs-keyword">private</span> String authorName;<br><span class="hljs-keyword">private</span> Long authorId;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">ArticleDao</span>&#123;<br>Article <span class="hljs-title function_">getArticleById</span><span class="hljs-params">(Long id)</span>;<br>Article <span class="hljs-title function_">findAll</span><span class="hljs-params">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
@@ -871,6 +919,303 @@
       
     </categories>
     
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>白夜行</title>
+    <link href="/posts/230107/"/>
+    <url>/posts/230107/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 白夜行</p><ul><li><img src="https://weread-1258476243.file.myqcloud.com/weread/cover/7/230107/t7_230107.jpg" alt=" 白夜行|200"></li><li>书名： 白夜行</li><li>作者： 东野圭吾</li><li>简介： 1999年，东野圭吾41岁正值盛年，写作出道已14年，在笔力、技巧、体力和雄心上都炉火纯青，于是洋洋洒洒写出了这部鸿篇巨制《白夜行》。这种规模宏大的长篇作品在职业作家一生的创作中极为罕见，完成后基本都被视为生涯代表作。《白夜行》一经推出即成为东野圭吾的长篇小说代表作，被万千书迷视为东野圭吾作品中的无冕之·王，畅销至今。《白夜行》中文版发行量超600万册，和《嫌疑人X的献身》《恶意》《解忧杂货店》并称为东野圭吾四大杰作。</li><li>出版时间 2017-07-21 00:00:00</li><li>ISBN： 9787544291163</li><li>分类： 精品小说-悬疑推理</li><li>出版社： 南海出版公司</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><h2 id="9"><a href="#9" class="headerlink" title="9"></a>9</h2><h2 id="9-1"><a href="#9-1" class="headerlink" title="9"></a>9</h2><h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><h2 id="13"><a href="#13" class="headerlink" title="13"></a>13</h2><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="6-1"><a href="#6-1" class="headerlink" title="6"></a>6</h2><h3 id="划线评论"><a href="#划线评论" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 一个男子  ^7570425-6QkBvOFoi<ul><li>💭 感觉这里的这个男子像是桐原</li><li>⏱ 2017-05-09 21:02:44</li></ul></li></ul><h2 id="7-1"><a href="#7-1" class="headerlink" title="7"></a>7</h2><h3 id="划线评论-1"><a href="#划线评论-1" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 “清华有个姓仓桥的女人吧，仓桥香苗？”  ^7570425-6QkBMwD57<ul><li>💭 这里感觉是桐原和穗他们将江利子抓了，然后嫁祸给仓桥，但是又不明说，让一成来自己猜，可怕</li><li>⏱ 2017-05-09 21:06:51</li></ul></li></ul><h2 id="8-1"><a href="#8-1" class="headerlink" title="8"></a>8</h2><h3 id="划线评论-2"><a href="#划线评论-2" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 “你说的难道是……”  ^7570425-6QkC3LGDc<ul><li>💭 果然和我想的一样，感觉好重的心机啊</li><li>⏱ 2017-05-09 21:11:06</li></ul></li></ul><h2 id="9-2"><a href="#9-2" class="headerlink" title="9"></a>9</h2><h3 id="划线评论-3"><a href="#划线评论-3" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 银行发生了盗领事件。存款人在毫不知情的状况下，户头遭到盗领。受害者是东京都内的上班族，本月十日到银行柜台提领存款时，发现应有两百万元左右的余额变成零。调查结果发现，存款是于三协银行府中分行由银行卡分七次提领，最后一次提款是四月二十二日。被害人是在银行推广下，于一九七九年办理银行卡，但卡片一直放在办公室的办公桌内，从未使用。警方研判极有可能是银行卡遭到伪造，现正展开调——”  ^7570425-6QkDHzpZW<ul><li>💭 这一段和后面的关掉电视都 说明了这里埋了一个伏笔，而且在后面会有重要的描写</li><li>⏱ 2017-05-09 21:36:10</li></ul></li></ul><h2 id="9-3"><a href="#9-3" class="headerlink" title="9"></a>9</h2><h3 id="划线评论-4"><a href="#划线评论-4" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 黑色西装的年轻男子  ^7570425-6QlBlEDko<ul><li>💭 看样子，这里的男子应该也是桐原，而且电话被监听应该确定了</li><li>⏱ 2017-05-10 12:46:54</li></ul></li></ul><h2 id="6-2"><a href="#6-2" class="headerlink" title="6"></a>6</h2><h3 id="划线评论-5"><a href="#划线评论-5" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 一个男孩与一个女孩手牵手的图案。男孩戴着帽子，女孩头上系着大大的蝴蝶结，非常精致  ^7570425-6QlDDEGxY<ul><li>💭 这个不就是书的封面么</li><li>⏱ 2017-05-10 13:21:53</li></ul></li></ul><h3 id="划线评论-6"><a href="#划线评论-6" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 一把剪刀，刀刃部分长达十余厘米，前端相当锐利。  ^7570425-6QlDAGO3n<ul><li>💭 ‘‘’细而锐利的刀刃，可能比水果刀更窄一点。‘’ 很像是杀死他父亲的啊</li><li>⏱ 2017-05-10 13:21:09</li></ul></li></ul><h3 id="划线评论-7"><a href="#划线评论-7" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 白夜里走路  ^7570425-6QlDalRjU<ul><li>💭 白夜走路，所以才叫白夜行么</li><li>⏱ 2017-05-10 13:14:40</li></ul></li></ul><h2 id="4-1"><a href="#4-1" class="headerlink" title="4"></a>4</h2><h3 id="划线评论-8"><a href="#划线评论-8" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 从新婚起，他们就分床睡，雪穗睡单人床。  ^7570425-6QlFZOeT7<ul><li>💭 新婚就分床睡？感觉 怪怪的</li><li>⏱ 2017-05-10 13:57:52</li></ul></li></ul><h2 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h2><h3 id="划线评论-9"><a href="#划线评论-9" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 氰化钾  ^7570425-6QmmSt2cR<ul><li>💭 看来是这个害死的今枝，那个侦探</li><li>⏱ 2017-05-11 00:52:37</li></ul></li></ul><h2 id="5-1"><a href="#5-1" class="headerlink" title="5"></a>5</h2><h3 id="划线评论-10"><a href="#划线评论-10" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 不久，一些鬼鬼祟祟的男人就常往这里跑，进大楼的时候还偷偷摸摸的，怕别人看到。一开始，我不知道在大楼里能干吗，问别的小孩，也没人知道，大人也不肯告诉我们。不过没多久，就有人搜集到消息了。他说那里好像是男人买女人的地方，只要付一万  ^7570425-6QmSsi9R8<ul><li>💭 这里是最开始的时候 的那个一万卖身的地方吧，从这里开始 ，应该慢慢的填坑了</li><li>⏱ 2017-05-11 08:54:47</li></ul></li></ul><h2 id="13-1"><a href="#13-1" class="headerlink" title="13"></a>13</h2><h3 id="划线评论-11"><a href="#划线评论-11" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 老公的兴趣  ^7570425-6QmV6M7ea<ul><li>💭 看到那个洋介，当铺老板是喜欢幼女，所以应该可以推出，是她把雪穗给强奸了，才会有后面的故事吧</li><li>⏱ 2017-05-11 09:35:17</li></ul></li></ul><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>精品小说</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>脂砚斋评石头记（全集）</title>
+    <link href="/posts/814416/"/>
+    <url>/posts/814416/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 脂砚斋评石头记（全集）</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/416/814416/t7_814416.jpg" alt=" 脂砚斋评石头记（全集）|200"></li><li>书名： 脂砚斋评石头记（全集）</li><li>作者： 曹雪芹 脂砚斋评</li><li>简介：     《石头记》是中国古代小说的之作，从传抄面世之初，各个抄本上都保留了大量的朱红色批语，一些重要的传抄版本上题有《脂砚斋重评石头记》的字样，所以后人便称这些早期的《红楼梦》抄本为“脂评本”或“脂批本”。</li></ul></blockquote><blockquote><ul><li>出版时间 2016-03-21 00:00:00</li><li>ISBN： </li><li>分类： 历史-历史典籍</li><li>出版社： 阅文集团</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="第二回-贾夫人仙逝扬州城-冷子兴演说荣国府"><a href="#第二回-贾夫人仙逝扬州城-冷子兴演说荣国府" class="headerlink" title="第二回 贾夫人仙逝扬州城 冷子兴演说荣国府"></a>第二回 贾夫人仙逝扬州城 冷子兴演说荣国府</h2><ul><li>📌 以百回之大文，先以此回作两大笔以冒之，诚是大观。世态人情，尽盘旋于其间，而一线不乱，非具龙象力者其孰能哉。此回亦非正文，本旨只在冷子兴一人，即俗谓冷中出热、无中生有也。其演说荣府一篇者，盖因族大人多，若从作者笔下一一叙出，尽一二回不能得明，则成何文字。故借用冷子一人，略出其大半，使阅者心中已有一荣府隐隐在心。然后用黛玉、宝钗等两三次皴染，则耀然于心中眼中矣。此即画家三染法也。未写荣府正人，先写外戚，是由远及近，由小至大也。若使先叙出荣府，然后一一叙及外戚，又一一至朋友，至奴仆，其死板拮据之笔，岂作十二钗人手中之物也。今先写外戚者，正是写荣国一府也。故又怕闲文赘累，开笔即先写贾夫人已死，是特使黛玉入荣之速也。通灵宝玉于士隐梦中一出，今（又）于子兴口中一出，阅者已洞然矣。然后于黛玉、宝钗二人目中，极精极细一描，则是文章锁合处。盖不肯一笔直下，有若放闸之水，燃信之爆，使其精华一泄而无余也。究竟此玉原应出自钗、黛目中，方有照应。今预从子兴口中说出，实虽写而却未写。观其后文可知，此一回则是虚敲旁击之文，笔则是反逆隐曲之笔。诗云： ^814416-4-860<ul><li>⏱ 2018-07-21 12:48:44</li></ul></li></ul><h2 id="第十二回-王熙凤毒设相思局-贾天祥正照风月鉴"><a href="#第十二回-王熙凤毒设相思局-贾天祥正照风月鉴" class="headerlink" title="第十二回 王熙凤毒设相思局 贾天祥正照风月鉴"></a>第十二回 王熙凤毒设相思局 贾天祥正照风月鉴</h2><ul><li>📌 贾瑞侧耳听着，半日不见人来，忽听“咯噔”一声，东边的门也倒关了。[平平略施小计。]贾瑞急的也不敢则声，只得悄悄的出来，将门撼了撼，关的铁桶一般。[此大抵是凤姐调遣，不先为点明者，可以少许多事故，又可以藏拙。]此时要求出去，亦不能够。南北皆是大房墙，要跳亦无攀援。这屋内又是过门风，空落落的。现是腊月天气，夜又长，朔风凛凛，侵肌裂骨，一夜几乎不曾冻死。[可为偷情一戒。][教导之法，慈悲之心尽矣，无奈迷途不悟何！]好容易盼到早晨，只见一个老婆子先将东门开了，进来去叫西门。贾瑞瞅他背着脸，一溜烟抱着肩竟跑了出来。幸而天气尚早，人都未起，从后门一径跑回家去。原来贾瑞父母早亡，只有他祖父代儒教养。那代儒素日教训最严，[教训最严，奈其心何。一叹！]不许贾瑞多走一步，生怕他在外吃酒赌钱，有误学业。今忽见他一夜不归，只料定他在外非饮即赌，嫖娼宿妓，[展转灵活，一人不放，一笔不肖。]那里想到这段公案！[世人万万想不到，况老学究乎！]因此气了一夜。贾瑞也捻着一把汗，少不得回来撒谎，只说：“往舅舅家去了，天黑了，留我住了一夜。”代儒道：“自来出门，非禀我不敢擅出，如何昨日私自去了？据此亦该打，何况是撒谎。”因此，发狠到底打了三四十板，[教令何尝不好，业种故此不同。]不许吃饭，令他跪在院内读文章，定要补出十天的工课来方罢。[处处点父母痴心，子孙不肖。此书系自愧而成。]贾瑞直冻了一夜，今又遭了苦打，且饿着肚子，跪在风地里读文章， [祸福无门，惟人自招。 ^814416-14-2588<ul><li>⏱ 2018-12-18 08:44:02</li></ul></li></ul><h2 id="第十六回-贾元春才选凤藻宫-秦鲸卿夭逝黄泉路"><a href="#第十六回-贾元春才选凤藻宫-秦鲸卿夭逝黄泉路" class="headerlink" title="第十六回 贾元春才选凤藻宫 秦鲸卿夭逝黄泉路"></a>第十六回 贾元春才选凤藻宫 秦鲸卿夭逝黄泉路</h2><ul><li>📌 ]笑道：“你能在这一行么？[勾下文。]这个事虽不算甚大，里头大有藏掖的。”[射利人微露心迹。][射利语，可叹是亲侄。]贾蔷笑道：“只好习学着办罢了。”贾蓉在身后灯影下悄拉凤姐衣襟，凤姐会意，因笑道：“你也太操心了，难道大爷比咱们还不会用人？偏你又怕他不在行了，谁都是在行的！孩子们已长的这么大了，没吃过猪肉，也看见过猪跑。大爷派他去，原不过是个坐纛旗儿，难道认真的叫他去讲价钱会经纪去呢！依我说就很好。”贾琏道：“自然是这样，并不是我驳回，少不得替他算计算计。”因问：“这一项银子动那一处的？”贾蔷道：“才也议到这里。赖爷爷说，[此等称呼，令人酸鼻。][好称呼。]不用从京里带下去，江南甄家还收着我们五万银子。明日写一封书信会票我们带去，先支三万，下剩二万存着，等置办花烛彩灯并各色帘栊帐幔的使费。”贾琏点头道：“这个主意好。”[《石头记》中多作心传神会之文，不必道明，一道明白，便入庸俗之套。]凤姐忙向贾蔷道：[再不略让一步，正是阿凤一生短处。]“既这样，我有两个在行妥当人，你就带他们去办，这个便宜了你呢。”贾蔷忙陪笑道：“正要和婶子讨两个人呢，[写贾蔷乖处。]这可巧了。”因问名字，凤姐便问赵嬷嬷。彼时赵嬷嬷已听呆了话，平儿忙笑推他，他才醒悟过来，[真是强将手下无弱兵。至精至细。]忙说：“一个叫赵天梁，一个叫赵天栋。”凤姐道：“可别忘了，我可干我的去了。”说着便出去了。贾蓉忙送出来，又悄悄向凤姐道：“婶子要带什么东西，吩咐开个帐，给蔷兄弟带了去，叫他按帐置办了来。” ^814416-18-12090<ul><li>⏱ 2019-01-25 21:45:24</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>历史</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>美元真相</title>
+    <link href="/posts/39481983/"/>
+    <url>/posts/39481983/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 美元真相</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/983/39481983/t7_39481983.jpg" alt=" 美元真相|200"></li><li>书名： 美元真相</li><li>作者： 达尔辛妮·大卫</li><li>简介： 为什么我们比父辈买得起更多衣服，却买不起房子？为什么国际油价在跌，汽油价格却不跟着跌？为什么奢侈品国外卖那么便宜，到国内却贵那么多？为什么俄罗斯人喜欢到德国买房？这一切日常问题的背后力量都是经济。跟随1美元的环球流通之旅，我们可以把小问题和大道理联系起来。在这本通俗易懂的经济学读物中，经济学家达尔辛妮·大卫跟随1美元从一个消费者到另一个消费者的足迹，以旁观者的口吻讲述了全球化世界运转的规律，深入浅出地揭示了全球化、贸易战、国债、关税、汇率等经济学基本概念，剖析了全球各国间的关系；用直观形象的写作手法，揭示了全球化世界究竟是如何运行的。这本书以一种有趣而有启发性的方式解读经济现象，让对经济学完全没有概念的我们也能轻松理解全球经济。</li><li>出版时间 2021-06-01 00:00:00</li><li>ISBN： 9787521728774</li><li>分类： 经济理财-财经</li><li>出版社： 中信出版社</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="第7章-混合家庭的实验：从俄罗斯到德国"><a href="#第7章-混合家庭的实验：从俄罗斯到德国" class="headerlink" title="第7章 混合家庭的实验：从俄罗斯到德国"></a>第7章 混合家庭的实验：从俄罗斯到德国</h2><ul><li>📌 华尔特·罗斯托起飞模型 ^39481983-11-3397-3408<ul><li>⏱ 2022-04-03 09:48:02</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>经济理财</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>结构性改革</title>
+    <link href="/posts/33362049/"/>
+    <url>/posts/33362049/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 结构性改革</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/49/33362049/t7_33362049.jpg" alt=" 结构性改革|200"></li><li>书名： 结构性改革</li><li>作者： 黄奇帆</li><li>简介： 恰逢百年未有之大变局，经济转型发展、中美贸易摩擦、新冠疫情暴发等问题交相叠加，无不考验着我国面对复杂问题的智慧和勇气，供给侧结构性改革的重要性与紧迫性空前凸显。这本书从基础性、结构性、机制性、制度性等多个维度，深入剖析我国供给侧关键矛盾并对症下药。 全书一共七章。第 一章详解如何紧抓供给侧结构性改革主线；第二章聚焦去杠杆与金融风险防范；第三章解读新时代下我国资本市场高质量发展之路；第四章讲述“数字化”如何重塑经济社会生态；第五章对房地产长效调控机制开出药方，并预判今后十年房地产行业六大趋势；第六章着眼于国有企业资本运作与地方政府营商环境改善；第七章阐释新局面、新特征下，我国对国际形势与中美关系的应对之道，深入剖析“双循环”新格局。</li><li>出版时间 2020-08-01 00:00:00</li><li>ISBN： 9787521718645</li><li>分类： 经济理财-财经</li><li>出版社： 中信出版社</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="序一-一部为解决经济难题提供对策的好书"><a href="#序一-一部为解决经济难题提供对策的好书" class="headerlink" title="序一 一部为解决经济难题提供对策的好书"></a>序一 一部为解决经济难题提供对策的好书</h2><ul><li>📌 人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾 ^33362049-4-839-867<ul><li>⏱ 2021-01-23 15:52:09</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>经济理财</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>哲学家们都干了些什么</title>
+    <link href="/posts/821598/"/>
+    <url>/posts/821598/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 哲学家们都干了些什么</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/598/821598/t7_821598.jpg" alt=" 哲学家们都干了些什么|200"></li><li>书名： 哲学家们都干了些什么</li><li>作者： 林欣浩</li><li>简介：     “哲学史写得这么浅白风趣八卦，你让我们哲学系的人还怎么混？！”用穷凶极恶的吐槽和喜闻乐见的八卦，彻底瓦解你对哲学史的成见，翻开任何一页，都是欲罢不能的哲学故事。来吧，哲学家们！自己说说看，你们究竟都干了些什么？宇宙的外面是什么？世界会不会是假的？上帝到底存在还是不存在？这个世界有没有终极真理？……你知道吗，你想过或者没想过的这些奇形怪状的问题，早在几千年前就被哲学家们一本正经地提出，挖空心思地找证据，面红耳赤地争论过了。在整个世界忙着探索、发展的漫长历史中，这帮哲学家们却神经质地死磕这个世界的真相和人生的意义，就好像一个网络游戏里的角色试图琢磨自己手里武器的代码是什么……</li></ul></blockquote><blockquote><ul><li>出版时间 2015-04-01 00:00:00</li><li>ISBN： 9787550242234</li><li>分类： 哲学宗教-哲学读物</li><li>出版社： 北京联合出版公司</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1><h2 id="书评-No-1"><a href="#书评-No-1" class="headerlink" title="书评 No.1"></a>书评 No.1</h2><p>哲学的科普书还是得可以，看完使我对哲学感到了兴趣。<br>以前觉得哲学的作用只是为了问那三个问题：<br>我是谁？我从哪里来？我到哪里去？<br>看完后觉得哲学是对世间所有的问题都去寻找一个最终的答案  ^7570425-7nS6FGNZh<br>⏱ 2021-02-04 23:06:40</p><h2 id="书评-No-2"><a href="#书评-No-2" class="headerlink" title="书评 No.2"></a>书评 No.2</h2><p> ^7570425-7nS6goplV<br>⏱ 2021-02-04 23:00:27</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>哲学宗教</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>如何阅读一本书</title>
+    <link href="/posts/856735/"/>
+    <url>/posts/856735/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 如何阅读一本书</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/735/856735/t7_856735.jpg" alt=" 如何阅读一本书|200"></li><li>书名： 如何阅读一本书</li><li>作者： 轻阅读编写组</li><li>简介： 读懂一本书，精于一件事，好方法比努力更重要。这是一本可靠的阅读技巧训练手册！每天8分钟，让你读得快、记得牢、学得透。林语堂、余秋雨、周国平倾情推荐你学会阅读！</li><li>出版时间 2017-03-01 00:00:00</li><li>ISBN： 9787513911504</li><li>分类： 生活百科-育儿</li><li>出版社： 民主与建设出版社</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="Why：为什么要阅读"><a href="#Why：为什么要阅读" class="headerlink" title="Why：为什么要阅读"></a>Why：为什么要阅读</h2><ul><li>📌 “读史使人明智，读诗使人灵秀，数学使人周密，物理学使人深刻，伦理学使人庄重，逻辑修辞之学则使人善辩：凡有所学，皆成性格。 ^856735-6-1626-1686<ul><li>⏱ 2017-06-22 12:45:13</li></ul></li></ul><h2 id="How：如何阅读一本书"><a href="#How：如何阅读一本书" class="headerlink" title="How：如何阅读一本书"></a>How：如何阅读一本书</h2><ul><li>📌 1．以缺乏时间为借口拒绝读书的人，需要更强烈的阅读动机和更有效的阅读方法。2．因旁人的眼光而拒绝读书的人，需要更强的专注力。3．只买书来读的人，需要警惕“藏而不读”。4．书非读完不可的人可以试着学会略读，用来处理分明不喜欢、心中却放不下的书。5．从不在书上涂画的人可以尝试边读边写，从现在起，拿起笔来阅读。6．只读不评，阅读的效果会减少一半。阅读虽是个人行为，本质却是交流。7．书可以多次阅读，但在不懂之处不断回读，并不是最好的解决办法。8．逐字逐句地阅读，是低效的阅读方式。也许你并不如自己想象中那么认真。9．读过就忘，说明阅读的效果还不佳，需要加强记忆与理解。10．只读经典或许会使人陷入误区，也容易让人产生阅读上的优越感。对于关注的主题，还是广泛阅读更好。 ^856735-9-1144-1736<ul><li>⏱ 2017-06-23 09:10:34</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>生活百科</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>简单之美：软件开发实践者的思考</title>
+    <link href="/posts/602534/"/>
+    <url>/posts/602534/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 简单之美：软件开发实践者的思考</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/534/602534/t7_602534.jpg" alt=" 简单之美：软件开发实践者的思考|200"></li><li>书名： 简单之美：软件开发实践者的思考</li><li>作者： 倪健</li><li>简介： 本书不是一本关于方法论的理论性书籍（尽管已经尝试在大量的思考上进行一些理论归纳），也不是一本关于具体技术的操作手册。本书为读者呈现的是作者在软件开发实践中的思考和体验，目的在于探究实践中的问题的根源，并给出思想上的解决之道。本书以软件开发的基本顺序为主线，以简单、想象和文化的开发思想为线索，以为软件开发实践提供指导价值为目标。本书力图做到传递经过组织的、可操作的软件开发经验，使软件开发领域的新手在知识（软件开发思想）积累过程中少走弯路，也使软件开发领域的老手可以对照自己的经验把可能的困惑降到最低。有一些有趣例子为那些有价值的思考提供支持。本书中，作者尝试对简单、想象和文化做一些形而上的思考。这些思考会比较抽象，但却是很多话题的基础。</li><li>出版时间 2010-04-01 00:00:00</li><li>ISBN： 9787111301035</li><li>分类： 计算机-计算机综合</li><li>出版社： 机械工业出版社</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul><li>📌 什么样的信息是有效的呢？简洁明确的思想表述；层次清晰的分类信息；令人信服的论证过程。 ^602534-4-6199-6317<ul><li>⏱ 2017-07-11 09:46:17</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>计算机</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>东周列国志：中国古典白话短篇小说的巅峰</title>
+    <link href="/posts/814401/"/>
+    <url>/posts/814401/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 东周列国志：中国古典白话短篇小说的巅峰</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/401/814401/t7_814401.jpg" alt=" 东周列国志：中国古典白话短篇小说的巅峰|200"></li><li>书名： 东周列国志：中国古典白话短篇小说的巅峰</li><li>作者： 冯梦龙</li><li>简介： 《东周列国志》是明代著名白话历史演义小说，以春秋五霸和战国七雄为主线，描写了西周末年到秦统一六国五百多年间的璀璨历史，其场面之宏大，跨度之久，事件之复杂，人物之多，描绘之深刻，后世史书只能望其项背。一个个以时间为顺序串联的列国故事，把上起治国、强军、富民之道，下至为人、做事、相处之策兼包并蓄，成为后世评判是非成败的标准和榜样，至今依然影响深远。</li><li>出版时间 2016-03-21 00:00:00</li><li>ISBN： </li><li>分类： 文学-古典文学</li><li>出版社： 阅文集团</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="第四回-秦文公郊天应梦-郑庄公掘地见母"><a href="#第四回-秦文公郊天应梦-郑庄公掘地见母" class="headerlink" title="第四回 秦文公郊天应梦 郑庄公掘地见母"></a>第四回 秦文公郊天应梦 郑庄公掘地见母</h2><ul><li>📌 白帝 ^814401-6-1738-1740<ul><li>⏱ 2017-06-12 19:02:50</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id="第四回-秦文公郊天应梦-郑庄公掘地见母-1"><a href="#第四回-秦文公郊天应梦-郑庄公掘地见母-1" class="headerlink" title="第四回 秦文公郊天应梦 郑庄公掘地见母"></a>第四回 秦文公郊天应梦 郑庄公掘地见母</h2><h3 id="划线评论"><a href="#划线评论" class="headerlink" title="划线评论"></a>划线评论</h3><ul><li>📌 白帝  ^7570425-6RacblmGI<ul><li>💭 白帝是秦文公   那么 秦始皇是白帝的后裔 ，刘邦 灭秦    有趣的是 刘备死在白帝城  传说中的天理循环？</li><li>⏱ 2017-06-12 19:02:51</li></ul></li></ul><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>文学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>苏格兰女王的悲剧（玛丽·斯图亚特传）</title>
+    <link href="/posts/816218/"/>
+    <url>/posts/816218/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 苏格兰女王的悲剧（玛丽·斯图亚特传）</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/218/816218/t7_816218.jpg" alt=" 苏格兰女王的悲剧（玛丽·斯图亚特传）|200"></li><li>书名： 苏格兰女王的悲剧（玛丽·斯图亚特传）</li><li>作者： 斯蒂芬·茨威格</li><li>简介： 本书是奥地利著名作家斯蒂芬·茨威格具有代表性的人物传记作品之一，茨威格的作品以刻画人物内心活动著称。本版由国内著名翻译家侯焕闳老师翻译并重新修订，其翻译作品一直受到国内读者高度认可和好评。本书对苏格兰女王玛丽·斯图亚特一生做了精彩而又深入细致的剖析，既充分展示了她跌宕起伏、命远多舛的女王生涯，又生动深刻地刻画了她作为一个女人对爱情飞蛾扑火般的执着追求。玛丽·斯图亚特，十六世纪宗教改革时期苏格兰的女王，出生六天便继承了苏格兰王位，十六岁时获得法国王后、苏格兰女王、英格兰女王三顶王冠，荣耀一时。十九岁时返回苏格兰亲政，后因宗教矛盾的激化以及涉嫌参与谋杀她的丈夫而引起苏格兰贵族的不满。</li><li>出版时间 2014-07-01 00:00:00</li><li>ISBN： 9787547030028</li><li>分类： 人物传记-女性人物</li><li>出版社： 万卷出版公司</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="封面"><a href="#封面" class="headerlink" title="封面"></a>封面</h2><ul><li>📌 [插图] ^816218-1-376<ul><li>⏱ 2018-02-07 09:06:02</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>人物传记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>嫌疑人X的献身</title>
+    <link href="/posts/230110/"/>
+    <url>/posts/230110/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 嫌疑人X的献身</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/110/230110/t7_230110.jpg" alt=" 嫌疑人X的献身|200"></li><li>书名： 嫌疑人X的献身</li><li>作者： 东野圭吾</li><li>简介： 日本推理小说天王、直木奖得主东野圭吾“迄今为止最高杰作”，创造了日本推理小说史上绝无仅有的奇迹，将第134届直木奖、第6届本格推理小说大奖及当年度日本三大推理小说排行榜第一名全部收入囊中。百年一遇的数学天才石神，每天都去固定的便当店买午餐，只为看一眼在那里做事的邻居靖子。与女儿相依为命的靖子，失手杀了上门纠缠勒索的前夫。为救靖子，石神挺身料理善后，以数学家缜密的逻辑思考设了一个匪夷所思的局，以令人惊骇莫名的诡计诠释了一份无比真挚纯粹的爱情……”</li><li>出版时间 2010-01-01 00:00:00</li><li>ISBN： 9787544245555</li><li>分类： 精品小说-悬疑推理</li><li>出版社： 南海出版公司</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><ul><li>📌 的衣物。衣物塞在一斗深的桶里，遭到部分焚烧，包括外套、毛衣、长裤、袜子和内衣。应是凶手点火后立即离去，没想到衣物并未继续燃烧，火很快就熄灭了。专案组并未提议针对这些衣物清查制造厂商，这些衣物显然属于批量生产的成衣。画像技术人员根据衣物和死者的体格，画出了被害者生前的模样。一些调查人员拿着这张图，以筱崎车站为中心四处收集相关信息。可能是这样的服装实在不够惹眼，几圈下来并未打听到任何有用的信息。新闻节目中也发布了这张肖像图，不久倒是收到了一大堆线索，但是没有一个能和尸体扯上关系。另外，警方针对报失人口进行了认真的比对，但没找到任何线索。接着，警方以江户川区为中心，彻底清查附近是否有近期失踪的独居男子，或是突然失踪的旅馆房客。最后，终于得到一条线索。位于龟户的出租旅馆扇屋，有一名房客失踪了。旅馆是在三月十一日发现房客失踪的，也就是尸体被人发现那天。由于已过了退房时间，旅馆员工只好去房间查看，却只看到少许行李，人不见踪影。由于经营者事先收了房钱，因而并未报警。警方立刻从房间和行李上采集到毛发与指纹，竟与尸体的完全一致！此外，从自行车上采到的指纹之一，也与房间行李上留下的指纹完全相同！失踪客人在旅馆登记簿上留下的姓名为“富樫慎二”，住 ^230110-5-5708<ul><li>⏱ 2017-05-14 02:30:49</li></ul></li></ul><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1><h2 id="书评-No-1"><a href="#书评-No-1" class="headerlink" title="书评 No.1"></a>书评 No.1</h2><p>比上一本有趣些 ^7570425-6QorcZUL0<br>⏱ 2017-05-12 09:32:06</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>精品小说</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>货币论（全两册）</title>
+    <link href="/posts/184066/"/>
+    <url>/posts/184066/</url>
+    
+    <content type="html"><![CDATA[<h1 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h1><blockquote><p>[!abstract] 货币论（全两册）</p><ul><li><img src="https://wfqqreader-1252317822.image.myqcloud.com/cover/66/184066/t7_184066.jpg" alt=" 货币论（全两册）|200"></li><li>书名： 货币论（全两册）</li><li>作者： 凯恩斯</li><li>简介： 通货膨胀永远是、而且在任何地方都只是一种货币现象。</li></ul></blockquote><blockquote><ul><li>出版时间 2008-07-01 00:00:00</li><li>ISBN： 9787561342299</li><li>分类： 经济理财-财经</li><li>出版社： 陕西师范大学出版社</li></ul></blockquote><h1 id="高亮划线"><a href="#高亮划线" class="headerlink" title="高亮划线"></a>高亮划线</h1><h1 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="章节评论-No-1"><a href="#章节评论-No-1" class="headerlink" title="章节评论 No.1"></a>章节评论 No.1</h3><ul><li>嗯嗯，货币是一个国家的信用，那么因此会具有不稳定性，因此我觉得马克思在这里说是天然货币是指，金银在货币上的稳定性，所以金银天生就可以当做货币 ^7570425-6TbkybtDI<ul><li>⏱ 2017-09-03 01:24:27</li></ul></li></ul><h1 id="本书评论"><a href="#本书评论" class="headerlink" title="本书评论"></a>本书评论</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>微信读书</category>
+      
+      <category>经济理财</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信读书</tag>
+      
+    </tags>
     
   </entry>
   
