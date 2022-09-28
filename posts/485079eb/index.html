@@ -228,7 +228,7 @@
         
         
         
-          131 分钟
+          132 分钟
         
       </span>
     
@@ -294,7 +294,7 @@
           </div>
 
 <h1 id="DDD详解-Domain-Primitive"><a href="#DDD详解-Domain-Primitive" class="headerlink" title="DDD详解-Domain Primitive"></a>DDD详解-Domain Primitive</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由于 DDD 不是一套框架，而是一种架构思想，所以在代码层面缺乏了足够的约束，导致 DDD 在实际应用中上手门槛很高，甚至可以说绝大部分人都对 DDD 的理解有所偏差。举个例子， Martin Fowler 在他个人博客里描述的一个 Anti-pattern，<a href="https://link.juejin.cn/?target=https://martinfowler.com/bliki/AnemicDomainModel.html" title="https://martinfowler.com/bliki/AnemicDomainModel.html">Anemic Domain Model</a> <a href="/posts/2879773850/">贫血模型</a>在实际应用当中层出不穷，而一些仍然火热的 ORM 工具比如 Hibernate，Entity Framework 实际上助长了贫血模型的扩散。同样的，传统的基于数据库技术以及 MVC 的四层应用架构（UI、Business、Data Access、Database），在一定程度上和 DDD 的一些概念混淆，导致绝大部分人在实际应用当中仅仅用到了 DDD 的建模的思想，而其对于整个架构体系的思想无法落地。</p>
-<p>我第一次接触 DDD 应该是 2012 年，当时除了大型互联网公司，基本上商业应用都还处于单机的时代，服务化的架构还局限于单机+LB 用 MVC 提供 Rest 接口供外部调用，或者用 SOAP 或 WebServices 做 RPC 调用，但其实更多局限于对外部依赖的协议。让我关注到 DDD 思想的是一个叫 Anti-Corruption Layer（防腐层）的概念，特别是其在解决外部依赖频繁变更的情况下，如何将核心业务逻辑和外部依赖隔离的机制。到了 2014 年， SOA 开始大行其道，微服务的概念开始冒头，而如何将一个 Monolith 应用合理的拆分为多个微服务成为了各大论坛的热门话题，而 DDD 里面的 Bounded Context（限界上下文）的思想为微服务拆分提供了一套合理的框架。而在今天，在一个所有的东西都能被称之为“服务”的时代（XAAS）， DDD 的思想让我们能冷静下来，去思考到底哪些东西可以被服务化拆分，哪些逻辑需要聚合，才能带来最小的维护成本，而不是简单的去追求开发效率。</p>
+<p>我第一次接触 DDD 应该是 2012 年，当时除了大型互联网公司，基本上商业应用都还处于单机的时代，服务化的架构还局限于单机+LB 用 MVC 提供 Rest 接口供外部调用，或者用 SOAP 或 WebServices 做 RPC 调用，但其实更多局限于对外部依赖的协议。让我关注到 DDD 思想的是一个叫 Anti-Corruption Layer（防腐层）的概念，特别是其在解决外部依赖频繁变更的情况下，如何将核心业务逻辑和外部依赖隔离的机制。到了 2014 年， SOA 开始大行其道，微服务的概念开始冒头，而如何将一个 Monolith 应用合理的拆分为多个微服务成为了各大论坛的热门话题，而 DDD 里面的 Bounded Context（限界上下文）的思想为微服务拆分提供了一套合理的框架。而在今天，在一个所有的东西都能被称之为“服务”的时代（XAAS<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="一切皆服务">[1]</span></a></sup>）， DDD 的思想让我们能冷静下来，去思考到底哪些东西可以被服务化拆分，哪些逻辑需要聚合，才能带来最小的维护成本，而不是简单的去追求开发效率。</p>
 <p>所以今天，我开始这个关于 DDD 的一系列文章，希望能继续在总结前人的基础上发扬光大 DDD 的思想，但是通过一套我认为合理的代码结构、框架和约束，来降低 DDD 的实践门槛，提升代码质量、可测试性、安全性、健壮性。</p>
 <p>未来会覆盖的内容包括：</p>
 <ol>
@@ -341,13 +341,18 @@
 <p>在传统Java架构里有几个办法能够去解决一部分问题，常见的如BeanValidation注解或ValidationUtils类，比如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// Use Bean Validation</span><br>User <span class="hljs-title function_">registerWithBeanValidation</span><span class="hljs-params">(</span><br><span class="hljs-params">  <span class="hljs-meta">@NotNull</span> <span class="hljs-meta">@NotBlank</span> String name,</span><br><span class="hljs-params">  <span class="hljs-meta">@NotNull</span> <span class="hljs-meta">@Pattern(regexp = &quot;^0?[1-9]&#123;2,3&#125;-?\\d&#123;8&#125;$&quot;)</span> String phone,</span><br><span class="hljs-params">  <span class="hljs-meta">@NotNull</span> String address</span><br><span class="hljs-params">)</span>;<br><br><span class="hljs-comment">// Use ValidationUtils:</span><br><span class="hljs-keyword">public</span> User <span class="hljs-title function_">registerWithUtils</span><span class="hljs-params">(String name, String phone, String address)</span> &#123;<br>    ValidationUtils.validateName(name); <span class="hljs-comment">// throws ValidationException</span><br>    ValidationUtils.validatePhone(phone);<br>    ValidationUtils.validateAddress(address);<br>    ...<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>但这几个传统的方法同样有问题：<br><strong>BeanValidation：</strong></p>
+<p>但这几个传统的方法同样有问题：</p>
+<p><strong>BeanValidation：</strong></p>
 <ul>
 <li>通常只能解决简单的校验逻辑，复杂的校验逻辑一样要写代码实现定制校验器</li>
-<li>在添加了新校验逻辑时，同样会出现在某些地方忘记添加一个注解的情况，DRY原则还是会被违背<br><strong>ValidationUtils类：</strong></li>
-<li>当大量的校验逻辑集中在一个类里之后，违背了Single Responsibility单一性原则，导致代码混乱和不可维护</li>
-<li>业务异常和校验异常还是会混杂<br>所以，有没有一种方法，能够一劳永逸的解决所有校验的问题以及降低后续的维护成本和异常处理成本呢？</li>
+<li>在添加了新校验逻辑时，同样会出现在某些地方忘记添加一个注解的情况，DRY原则还是会被违背</li>
 </ul>
+<p><strong>ValidationUtils类：</strong></p>
+<ul>
+<li>当大量的校验逻辑集中在一个类里之后，违背了Single Responsibility单一性原则，导致代码混乱和不可维护</li>
+<li>业务异常和校验异常还是会混杂</li>
+</ul>
+<p>所以，有没有一种方法，能够一劳永逸的解决所有校验的问题以及降低后续的维护成本和异常处理成本呢？</p>
 <h3 id="问题3-业务代码的清晰度"><a href="#问题3-业务代码的清晰度" class="headerlink" title="问题3 - 业务代码的清晰度"></a>问题3 - 业务代码的清晰度</h3><p>在这段代码里：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">areaCode</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>String[] areas = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[]&#123;<span class="hljs-string">&quot;0571&quot;</span>, <span class="hljs-string">&quot;021&quot;</span>, <span class="hljs-string">&quot;010&quot;</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; phone.length(); i++) &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">prefix</span> <span class="hljs-operator">=</span> phone.substring(<span class="hljs-number">0</span>, i);<br>    <span class="hljs-keyword">if</span> (Arrays.asList(areas).contains(prefix)) &#123;<br>        areaCode = prefix;<br>        <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br><span class="hljs-type">SalesRep</span> <span class="hljs-variable">rep</span> <span class="hljs-operator">=</span> salesRepRepo.findRep(areaCode);<br></code></pre></td></tr></table></figure>
 <p>实际上出现了另外一种常见的情况，那就是从一些入参里抽取一部分数据，然后调用一个外部依赖获取更多的数据，然后通常从新的数据中再抽取部分数据用作其他的作用。这种代码通常被称作“胶水代码”，其本质是由于外部依赖的服务的入参并不符合我们原始的入参导致的。比如，如果SalesRepRepository包含一个findRepByPhone的方法，则上面大部分的代码都不必要了。</p>
@@ -356,7 +361,7 @@
 <p>然后原始代码变为：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">areaCode</span> <span class="hljs-operator">=</span> findAreaCode(phone);<br><span class="hljs-type">SalesRep</span> <span class="hljs-variable">rep</span> <span class="hljs-operator">=</span> salesRepRepo.findRep(areaCode);<br></code></pre></td></tr></table></figure>
 <p>而为了复用以上的方法，可能会抽离出一个静态工具类 PhoneUtils 。但是这里要思考的是，静态工具类是否是最好的实现方式呢？当你的项目里充斥着大量的静态工具类，业务代码散在多个文件当中时，你是否还能找到核心的业务逻辑呢？</p>
-<h3 id="问题4-可测试性"><a href="#问题4-可测试性" class="headerlink" title="问题4 - 可测试性"></a>问题4 - 可测试性</h3><p>为了保证代码质量，每个方法里的每个入参的每个可能出现的条件都要有 TC 覆盖（假设我们先不去测试内部业务逻辑），所以在我们这个方法里需要以下的 TC：<br><img src="/posts/485079eb/images/DDD-DomainPrimitive.png" srcset="/img/loading.gif" lazyload alt=""><br>假如一个方法有 N 个参数，每个参数有 M 个校验逻辑，至少要有 N * M 个 TC 。</p>
+<h3 id="问题4-可测试性"><a href="#问题4-可测试性" class="headerlink" title="问题4 - 可测试性"></a>问题4 - 可测试性</h3><p>为了保证代码质量，每个方法里的每个入参的每个可能出现的条件都要有 TC<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Test Case 测试用例">[2]</span></a></sup> 覆盖（假设我们先不去测试内部业务逻辑），所以在我们这个方法里需要以下的 TC：<br><img src="/posts/485079eb/images/DDD-DomainPrimitive.png" srcset="/img/loading.gif" lazyload alt=""><br>假如一个方法有 N 个参数，每个参数有 M 个校验逻辑，至少要有 N * M 个 TC 。</p>
 <p>如果这时候在该方法中加入一个新的入参字段 fax ，即使 fax 和 phone 的校验逻辑完全一致，为了保证 TC 覆盖率，也一样需要 M 个新的 TC 。</p>
 <p>而假设有 P 个方法中都用到了 phone 这个字段，这 P 个方法都需要对该字段进行测试，也就是说整体需要：<br><strong>P * N * M</strong></p>
 <p>个测试用例才能完全覆盖所有数据验证的问题，在日常项目中，这个测试的成本非常之高，导致大量的代码没被覆盖到。而没被测试覆盖到的代码才是最有可能出现问题的地方。</p>
@@ -459,7 +464,9 @@
 <p>改为：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">service.register(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Name</span>(<span class="hljs-string">&quot;殷浩&quot;</span>), <span class="hljs-keyword">new</span> <span class="hljs-title class_">PhoneNumber</span>(<span class="hljs-string">&quot;0571-12345678&quot;</span>), <span class="hljs-keyword">new</span> <span class="hljs-title class_">Address</span>(<span class="hljs-string">&quot;浙江省杭州市余杭区文三西路969号&quot;</span>));<br></code></pre></td></tr></table></figure>
 <p>通过以上 4 步，就能让你的代码变得更加简洁、优雅、健壮、安全。</p>
-
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span>一切皆服务
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>Test Case 测试用例
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
