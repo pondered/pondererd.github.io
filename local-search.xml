@@ -374,31 +374,6 @@
   
   
   <entry>
-    <title>MVC</title>
-    <link href="/posts/2218208641/"/>
-    <url>/posts/2218208641/</url>
-    
-    <content type="html"><![CDATA[<h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><h2 id="MVC介绍"><a href="#MVC介绍" class="headerlink" title="MVC介绍"></a>MVC介绍</h2><img src="/posts/2218208641/images/MVC%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.png" alt="MVC三层架构">]]></content>
-    
-    
-    <categories>
-      
-      <category>计算机</category>
-      
-      <category>架构</category>
-      
-      <category>软件架构</category>
-      
-      <category>MVC</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>DDD</title>
     <link href="/posts/1836512142/"/>
     <url>/posts/1836512142/</url>
@@ -488,6 +463,31 @@
       <tag>DDD</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MVC</title>
+    <link href="/posts/2218208641/"/>
+    <url>/posts/2218208641/</url>
+    
+    <content type="html"><![CDATA[<h1 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h1><h2 id="MVC介绍"><a href="#MVC介绍" class="headerlink" title="MVC介绍"></a>MVC介绍</h2><img src="/posts/2218208641/images/MVC%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84.png" alt="MVC三层架构">]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机</category>
+      
+      <category>架构</category>
+      
+      <category>软件架构</category>
+      
+      <category>MVC</category>
+      
+    </categories>
+    
     
   </entry>
   
