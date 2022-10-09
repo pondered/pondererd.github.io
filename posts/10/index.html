@@ -18,24 +18,25 @@
   <meta name="author" content="Ponder">
   <meta name="keywords" content="">
   
-    <meta name="description" content="cobra cobra 是一个命令行程序库，可以用来编写命令行程序。 特性 支持子命令, 如 app server等 兼容POXIS选项 嵌套子命令 全局、本地层级选项，可以在多处设置选项，按照一定的顺序取用  概念 命令(Command)：就是需要执行的操作 参数(Arg)：命令的参数，即要操作的对象 选项(Flag)：命令选项可以调整命令的行为例：hugo server --port&#x3D;1313">
+    <meta name="description" content="初始化和内存清理构造器初始化通过构造器，可以确保每个对象都会被初始化。没有任何参数的构造器叫做默认构造器  构造器和类同名 每个类可以用一个或以上的构造器 构造器可以有0个或多个参数 构造器没有返回值 构造器随着 new 操作一起调用  默认构造器方法方法重载this垃圾清理和回收成员初始化构造器初始化数组初始化可变参数枚举">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cobra 分析">
-<meta property="og:url" content="https://ponder.red/posts/387598377/index.html">
+<meta property="og:title" content="第二章 初始化和内存清理">
+<meta property="og:url" content="https://ponder.red/posts/10/index.html">
 <meta property="og:site_name" content="Ponder | 留白">
-<meta property="og:description" content="cobra cobra 是一个命令行程序库，可以用来编写命令行程序。 特性 支持子命令, 如 app server等 兼容POXIS选项 嵌套子命令 全局、本地层级选项，可以在多处设置选项，按照一定的顺序取用  概念 命令(Command)：就是需要执行的操作 参数(Arg)：命令的参数，即要操作的对象 选项(Flag)：命令选项可以调整命令的行为例：hugo server --port&#x3D;1313">
+<meta property="og:description" content="初始化和内存清理构造器初始化通过构造器，可以确保每个对象都会被初始化。没有任何参数的构造器叫做默认构造器  构造器和类同名 每个类可以用一个或以上的构造器 构造器可以有0个或多个参数 构造器没有返回值 构造器随着 new 操作一起调用  默认构造器方法方法重载this垃圾清理和回收成员初始化构造器初始化数组初始化可变参数枚举">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-21T09:57:57.000Z">
-<meta property="article:modified_time" content="2022-09-27T02:35:56.393Z">
+<meta property="article:published_time" content="2022-10-09T09:36:55.000Z">
+<meta property="article:modified_time" content="2022-10-09T09:38:36.000Z">
 <meta property="article:author" content="Ponder">
-<meta property="article:tag" content="Go">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Java入门">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>cobra 分析 - Ponder | 留白</title>
+  <title>第二章 初始化和内存清理 - Ponder | 留白</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -188,7 +189,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="cobra 分析"></span>
+            <span id="subtitle" data-typed-text="第二章 初始化和内存清理"></span>
           
         </div>
 
@@ -199,8 +200,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-21 17:57" pubdate>
-          2022年9月21日 下午
+        <time datetime="2022-10-09 17:36" pubdate>
+          2022年10月9日 下午
         </time>
       </span>
     
@@ -211,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          273 字
+          153 字
         
       </span>
     
@@ -222,7 +223,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -278,25 +279,20 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">cobra 分析</h1>
+            <h1 style="display: none">第二章 初始化和内存清理</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h1><p> <code>cobra</code> 是一个命令行程序库，可以用来编写命令行程序。</p>
-<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
-<li>支持子命令, 如 <code>app server</code>等</li>
-<li>兼容POXIS选项</li>
-<li>嵌套子命令</li>
-<li>全局、本地层级选项，可以在多处设置选项，按照一定的顺序取用</li>
+                <h1 id="初始化和内存清理"><a href="#初始化和内存清理" class="headerlink" title="初始化和内存清理"></a>初始化和内存清理</h1><h2 id="构造器初始化"><a href="#构造器初始化" class="headerlink" title="构造器初始化"></a>构造器初始化</h2><p>通过构造器，可以确保每个对象都会被初始化。没有任何参数的构造器叫做<code>默认构造器</code></p>
+<ul>
+<li>构造器和类同名</li>
+<li>每个类可以用一个或以上的构造器</li>
+<li>构造器可以有0个或多个参数</li>
+<li>构造器没有返回值</li>
+<li>构造器随着 <code>new</code> 操作一起调用</li>
 </ul>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
-<li>命令(Command)：就是需要执行的操作</li>
-<li>参数(Arg)：命令的参数，即要操作的对象</li>
-<li>选项(Flag)：命令选项可以调整命令的行为<br>例：<br><code>hugo server --port=1313</code><br>其中 <code>server</code> 是子命令，<code>--port</code> 是参数<br><code>git clone URL --bare</code><br>其中 <code>clone</code> 是子命令，<code>URL</code> 是参数，<code>--bare</code>是选项</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ccard">type: folder_brief_live<br></code></pre></td></tr></table></figure>
-
+<h3 id="默认构造器"><a href="#默认构造器" class="headerlink" title="默认构造器"></a>默认构造器</h3><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h3><h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><h2 id="垃圾清理和回收"><a href="#垃圾清理和回收" class="headerlink" title="垃圾清理和回收"></a>垃圾清理和回收</h2><h2 id="成员初始化"><a href="#成员初始化" class="headerlink" title="成员初始化"></a>成员初始化</h2><h2 id="构造器初始化-1"><a href="#构造器初始化-1" class="headerlink" title="构造器初始化"></a>构造器初始化</h2><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2>
                 
               </div>
             
@@ -319,13 +315,20 @@
   
     <span>></span>
     
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%A1%86%E6%9E%B6/" class="category-chain-item">框架</a>
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%A1%86%E6%9E%B6/cobra/" class="category-chain-item">cobra</a>
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" class="category-chain-item">Java</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/Java%E5%85%A5%E9%97%A8/" class="category-chain-item">Java入门</a>
+  
+  
+
   
 
   
@@ -343,7 +346,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Go/">#Go</a>
+        <a href="/tags/Java/">#Java</a>
+      
+        <a href="/tags/Java%E5%85%A5%E9%97%A8/">#Java入门</a>
       
     </div>
   
@@ -355,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>cobra 分析</div>
-      <div>https://ponder.red/posts/387598377/</div>
+      <div>第二章 初始化和内存清理</div>
+      <div>https://ponder.red/posts/10/</div>
     </div>
     <div class="license-meta">
       
@@ -368,13 +373,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月21日</div>
+          <div>2022年10月9日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年9月27日</div>
+          <div>2022年10月9日</div>
         </div>
       
       
@@ -417,18 +422,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/3135569691/" title="Redis">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Redis</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/263832673/" title="软件架构编年史">
-                        <span class="hidden-mobile">软件架构编年史</span>
+                      <a href="/posts/5/" title="第一章 Java基础">
+                        <span class="hidden-mobile">第一章 Java基础</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
